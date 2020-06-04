@@ -1,6 +1,9 @@
 import players.EnsJoueurs;
 import question.TypeQCM;
 import question.Question;
+import question.TypeRC;
+import question.TypeVF;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -11,7 +14,10 @@ public class Main {
 
         String path = "assets/";
 
-        ArrayList<TypeQCM> a = new ArrayList<TypeQCM>();
+        ArrayList<TypeQCM> a = new ArrayList<>();
+        ArrayList<TypeVF> b = new ArrayList<>();
+        ArrayList<TypeRC> c = new ArrayList<>();
+
 
         // Initialisation des questions
         File f = new File(path + "quizz.txt");
@@ -20,25 +26,28 @@ public class Main {
         String line =null;
 
         while (sc.hasNext()) {
+            line = sc.nextLine();
+
             // Récup les RC
-             line = sc.nextLine();
             if (line.equals("rc")){
-                //TypeRC q = new TypeRC(sc);
-                System.out.println(line+ "\n");
+                TypeRC q = new TypeRC(sc);
+                c.add(q);
+                //System.out.println(line+ "\n");
             }
 
 
 
-        // Récup les QCM
+            // Récup les QCM
             if (line.equals("qcm")){
                 TypeQCM q = new TypeQCM(sc);
                 a.add(q);
             }
 
-        // Récup les VF
+            // Récup les VF
             if(line.equals("vf")){
-                //TypeVF q = new TypeVF(sc);
-                System.out.println(line);
+                TypeVF q = new TypeVF(sc);
+                b.add(q);
+                //System.out.println(line);
             }
         }
         /*
@@ -60,9 +69,22 @@ public class Main {
         //TypeQCM q = new TypeQCM("a","b","c","d");
         //Question e = new Question("a",);
 
-        for(TypeQCM e: a){
+
+        System.out.println("--------------------- Affichage des QCM---------------------");
+        for (TypeQCM e: a) {
             e.afficher();
         }
 
+        System.out.println("---------------------Affichage des Vrai/Faux---------------------");
+        for (TypeVF e: b) {
+            e.afficher();
+            System.out.println();
+        }
+
+        System.out.println("---------------------Affichage des Réponses courtes---------------------");
+        for (TypeRC e : c) {
+            e.afficher();
+            System.out.println();
+        }
     }
 }

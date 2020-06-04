@@ -11,6 +11,7 @@ public class Question <T>{
         this.numQ = numQ;
         this.themeQ = themeQ;
         this.nivQ = nivQ;
+        this.enonceQ = enonceQ;
     }
 
     public void afficher(T enonceQ) {
@@ -19,8 +20,8 @@ public class Question <T>{
 
     @Override
     public String toString(){
-        String output;
-        output = "Niveau = " + nivQ + enonceQ.toString();
+        String output = "";
+        output += "Niveau = " + nivQ + "\n" + enonceQ.toString();
         return output;
     }
 }
