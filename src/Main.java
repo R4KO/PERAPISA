@@ -73,10 +73,18 @@ public class Main {
         e.creer();
         e.afficher();
 
+
+        ArrayList<Joueur> jou = new ArrayList<Joueur>();
+
         System.out.println("---------------------Sélection des joueurs---------------------");
         for (Joueur j : e.selectionnerJoueurs()) {
+            jou.add(j);
             j.afficher();
         }
 
+        System.out.println("\n\n---------------------Phase n°1---------------------");
+        for(Joueur j: jou){
+            j.afficher();
+        }
     }
 }
