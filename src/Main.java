@@ -11,13 +11,11 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
-        //System.out.println("Hello World");
-
         String path = "assets/";
 
-        ArrayList<TypeQCM> a = new ArrayList<>();
-        ArrayList<TypeVF> b = new ArrayList<>();
-        ArrayList<TypeRC> c = new ArrayList<>();
+        ArrayList<TypeQCM> a = new ArrayList<>(); // Questions QCM
+        ArrayList<TypeVF> b = new ArrayList<>(); // Questions Vrai/Faux
+        ArrayList<TypeRC> c = new ArrayList<>(); // Questions Réponse courte
 
 
         // Initialisation des questions
