@@ -11,13 +11,12 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
-        //System.out.println("Hello World");
 
         String path = "assets/";
 
-        ArrayList<TypeQCM> a = new ArrayList<>();
-        ArrayList<TypeVF> b = new ArrayList<>();
-        ArrayList<TypeRC> c = new ArrayList<>();
+        ArrayList<TypeQCM> a = new ArrayList<>(); // QCM
+        ArrayList<TypeVF> b = new ArrayList<>(); // Vrai/Faux
+        ArrayList<TypeRC> c = new ArrayList<>(); // Répnses courtes
 
 
         // Initialisation des questions
@@ -33,7 +32,6 @@ public class Main {
             if (line.equals("rc")){
                 TypeRC q = new TypeRC(sc);
                 c.add(q);
-                //System.out.println(line+ "\n");
             }
 
 
@@ -48,7 +46,6 @@ public class Main {
             if (line.equals("vf")){
                 TypeVF q = new TypeVF(sc);
                 b.add(q);
-                //System.out.println(line);
             }
         }
 

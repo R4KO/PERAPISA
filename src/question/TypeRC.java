@@ -8,7 +8,7 @@ public class TypeRC extends TypeQuestion {
     public TypeRC(Scanner sc) {
         theme = sc.nextLine();
         niveau = sc.nextInt();
-        sc.nextLine();
+        sc.nextLine(); // important
 
         proposition = sc.nextLine();
         reponse = sc.nextLine();

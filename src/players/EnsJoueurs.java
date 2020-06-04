@@ -28,8 +28,9 @@ public class EnsJoueurs implements Phase {
         }
         else {
             j.changerEtat("sélectionné");
+            return j;
         }
-        return j;
+        return selectionnerJoueur();
     }
 
     public void creer() {
