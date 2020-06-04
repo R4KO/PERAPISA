@@ -55,9 +55,11 @@ public class TypeQCM extends TypeQuestion{
 
     @Override
     public String toString() {          //Fonction retourne String
-        int i;
         String output = "";
-        i = (int) (Math.random() * 100);
+
+        output += super.toString();
+
+        int i = (int) (Math.random() * 100);
 
         if (i % 4 == 0) {
             output += texteQCM + "\n\n" + rep1QCM + "\n" + rep2QCM + "\n" + rep3QCM + "\n" + repBonQCM;
