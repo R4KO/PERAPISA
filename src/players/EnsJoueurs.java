@@ -2,7 +2,7 @@ package players;
 
 import java.util.Vector;
 
-public class EnsJoueurs {
+public class EnsJoueurs implements Phase {
     private Vector<Joueur> joueurs;
 
     public EnsJoueurs() {
@@ -12,8 +12,23 @@ public class EnsJoueurs {
     public Joueur selectionnerJoueur() {
         // nombre aléatoire
         Joueur j =  joueurs.elementAt((int) (Math.random() * 100) % joueurs.size());
-        // Sélectionné donc change d'état
-        j.changerEtat("sélectionné");
+        /*
+        if (!j.getEtat().equals("sélectionné")) {
+            // Sélectionné donc change d'état
+            j.changerEtat("sélectionné");
+            return j;
+        }
+        else {
+            selectionnerJoueur();
+        }
+        */
+
+        if (j.getEtat().equals("sélectionné")) {
+            selectionnerJoueur();
+        }
+        else {
+            j.changerEtat("sélectionné");
+        }
         return j;
     }
 
@@ -39,4 +54,8 @@ public class EnsJoueurs {
         return output;
     }
 
+    @Override
+    public Joueur[] selectionnerJoueurs() {
+        return new Joueur[]{selectionnerJoueur(), selectionnerJoueur(), selectionnerJoueur(), selectionnerJoueur()};
+    }
 }

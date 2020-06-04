@@ -3,23 +3,17 @@ animaux
 1
 La baleine bleue est le plus grand animal marin retrouvé dans l'eau .
 Faux
-Vrai
-Faux
 
 vf
 animaux
 2
 Les crocodiles préhistoriques pouvaient mesurer plus de 14 mètres .
 Vrai
-Vrai
-Faux
 
 vf
 animaux
 3
 Certaines personnes auraient retrouvé des singes aux Pôle Sud avec beaucoup de poils .
-Faux
-Vrai
 Faux
 
 vf
@@ -27,23 +21,17 @@ astronomie
 1
 L'astronomie est considérée comme la plus ancienne des sciences.
 Vrai
-Vrai
-Faux
 
 vf
 astronomie
 2
 Le soleil devient plus lumineux à mesure qu'il vieillit.
 Vrai
-Vrai
-Faux
 
 vf
 astronomie
 3
 Johannes Kepler a découvert les trois lois universelles du mouvement.
-Faux
-Vrai
 Faux
 
 vf
@@ -51,47 +39,35 @@ capitale
 1
 La ville de Wellington est la capitale située le plus au sud.
 Vrai
-Vrai
-Faux
 
 vf
 capitale
 2
 Varsovie a été détruite à plus de 80 % durant la Seconde Guerre mondiale.
 Vrai
-Vrai
-Faux
 
 vf
 capitale
 3
 La population de Mexico est passée d’environ 500 000 à 20 millions d’habitants en 100 ans.
 Vrai
-Vrai
-Faux
 
 vf
 football
 1
 Zlatan Ibrahimovic est suédois.
 Vrai
-Faux
-Vrai
 
 vf
 football
 2
 C'est Lyon qui a remporté le plus de championnats de France de ligue 1.
-Vrai
-Faux
 Faux
 
 vf
 football
 3
 L'Euro 2012 a été remporté par l'Allemagne.
-Vrai
-Faux
 Faux
 
 vf
@@ -99,15 +75,11 @@ informatique
 1
 'PC' signifie: 'Personal Computer'.
 Vrai
-Vrai
-Faux
 
 vf
 informatique
 2
 Le 'CPU' est le synonyme de carte graphique.
-Faux
-Vrai
 Faux
 
 vf
@@ -115,15 +87,11 @@ informatique
 3
 Un 'pourriel' est l'appellation française d'un spam.
 Vrai
-Vrai
-Faux
 
 vf
 jeuxvidéo
 1
 Le premier Mario Bros sur Nintendo DS a été créé en 1971...
-Faux
-Vrai
 Faux
 
 vf
@@ -131,39 +99,29 @@ jeuxvidéo
 2
 Mario Kart a été créé par des Japonais...
 Vrai
-Vrai
-Faux
 
 vf
 jeuxvidéo
 3
 Mario est le frère de Luigi...
 Vrai
-Vrai
-Faux
 
 vf
 mathématiques
 1
 Une figure géométrique peut être composée de deux côtés.
 Vrai
-Vrai
-Faux
 
 vf
 mathématiques
 2
 Les angles d'un triangle équilatéral font tous 60°...
 Vrai
-Vrai
-Faux
 
 vf
 mathématiques
 3
 La théorème de Pythagore s'applique seulement pour les carrés...
-Faux
-Vrai
 Faux
 
 vf
@@ -171,15 +129,11 @@ musique
 1
 "Je t'aime" est un des derniers titres de Katy Perry :
 Faux
-Vrai
-Faux
 
 vf
 musique
 2
 L'octobasse peut avoir une taille de 4 mètres :
-Vrai
-Faux
 Vrai
 
 vf
@@ -187,23 +141,17 @@ musique
 3
 L'Orgue de la mer est une sculpture sonore localisée en Croatie :
 Vrai
-Vrai
-Faux
 
 vf
 sciences
 1
 Galilée a vécu entre 16e siècle et le 17e siècle.
 Vrai
-Vrai
-Faux
 
 vf
 sciences
 2
 Neil Armstrong est le troisième homme à avoir posé le pied sur la Lune.
-Faux
-Vrai
 Faux
 
 vf
@@ -211,15 +159,11 @@ sciences
 3
 Cosmonaute et astronaute ne veulent pas dire la même chose.
 Faux
-Vrai
-Faux
 
 vf
 sport
 1
 Le premier champion du monde de football fut le Brésil.
-Faux
-Vrai
 Faux
 
 vf
@@ -227,15 +171,11 @@ sport
 2
 L'équipe de France de rugby a atteint 3 fois la finale de la coupe du monde sans jamais la remporter, de même pour les Pays-Bas au foot.
 Vrai
-Vrai
-Faux
 
 vf
 sport
 3
 Ayrton Senna a été le premier Brésilien champion du monde de formule 1.
-Faux
-Vrai
 Faux
 
 rc
