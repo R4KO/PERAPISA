@@ -1,4 +1,5 @@
 import players.EnsJoueurs;
+import players.Joueur;
 import question.TypeQCM;
 import question.Question;
 import question.TypeRC;
@@ -44,31 +45,12 @@ public class Main {
             }
 
             // Récup les VF
-            if(line.equals("vf")){
+            if (line.equals("vf")){
                 TypeVF q = new TypeVF(sc);
                 b.add(q);
                 //System.out.println(line);
             }
         }
-        /*
-        // Création de l'ensemble des joueurs
-        EnsJoueurs e = new EnsJoueurs();
-        e.creer();
-        e.afficher();
-
-        System.out.println("---------------------Sélection d'un joueur---------------------");
-
-        e.selectionnerJoueur().afficher();
-
-        System.out.println("---------------------Nouvel ensemble---------------------");
-
-        e.afficher();
-        */
-
-        //Création d'une question
-        //TypeQCM q = new TypeQCM("a","b","c","d");
-        //Question e = new Question("a",);
-
 
         System.out.println("--------------------- Affichage des QCM---------------------");
         for (TypeQCM e: a) {
@@ -86,5 +68,17 @@ public class Main {
             e.afficher();
             System.out.println();
         }
+
+
+        // Création de l'ensemble des joueurs
+        EnsJoueurs e = new EnsJoueurs();
+        e.creer();
+        e.afficher();
+
+        System.out.println("---------------------Sélection des joueurs---------------------");
+        for (Joueur j : e.selectionnerJoueurs()) {
+            j.afficher();
+        }
+
     }
 }

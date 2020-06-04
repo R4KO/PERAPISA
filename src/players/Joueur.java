@@ -39,4 +39,7 @@ public class Joueur {
         return output;
     }
 
+    public String getEtat() {
+        return etat;
+    }
 }
