@@ -8,20 +8,20 @@ public class Themes {
 
     public Themes() {
         themes = new ArrayList<>();
-        initialisationTheme();
+        initialisationTheme(themes);
     }
 
-    public void initialisationTheme(){
-        this.themes.add("Animaux");
-        this.themes.add("Astronomie");
-        this.themes.add("Capitale");
-        this.themes.add("Football");
-        this.themes.add("Mathématiques");
-        this.themes.add("Musique");
-        this.themes.add("Sciences");
-        this.themes.add("Sport");
-        this.themes.add("Jeux Vidéo");
-        this.themes.add("Informatique");
+    public void initialisationTheme(ArrayList<String> themes){
+        themes.add("Animaux");
+        themes.add("Astronomie");
+        themes.add("Capitale");
+        themes.add("Football");
+        themes.add("Mathématiques");
+        themes.add("Musique");
+        themes.add("Sciences");
+        themes.add("Sport");
+        themes.add("Jeux Vidéo");
+        themes.add("Informatique");
     }
 
     public Themes(String themeCourant) {
