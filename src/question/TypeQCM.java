@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 public class TypeQCM extends TypeQuestion{
 
-    private String texteQCM;            //La question
     private String rep1QCM;             //réponse n°1
     private String rep2QCM;             //réponse n°2
     private String rep3QCM;             //réponse n°3
@@ -20,7 +19,7 @@ public class TypeQCM extends TypeQuestion{
 
         String reponse = null;
 
-        this.texteQCM = sc.nextLine();
+        proposition = sc.nextLine();
         this.repBonQCM = sc.nextLine();
 
         reponse = sc.nextLine();
@@ -62,13 +61,13 @@ public class TypeQCM extends TypeQuestion{
         int i = (int) (Math.random() * 100);
 
         if (i % 4 == 0) {
-            output += texteQCM + "\n\n" + rep1QCM + "\n" + rep2QCM + "\n" + rep3QCM + "\n" + repBonQCM;
+            output += rep1QCM + "\n" + rep2QCM + "\n" + rep3QCM + "\n" + repBonQCM;
         }else if(i % 4 == 1){
-            output += texteQCM + "\n\n" + rep1QCM + "\n" + rep2QCM + "\n" + repBonQCM + "\n" + rep3QCM;
+            output += rep1QCM + "\n" + rep2QCM + "\n" + repBonQCM + "\n" + rep3QCM;
         }else if(i % 4 == 2){
-            output += texteQCM + "\n\n" + rep1QCM + "\n" + repBonQCM + "\n" + rep2QCM + "\n" + rep3QCM;
+            output += rep1QCM + "\n" + repBonQCM + "\n" + rep2QCM + "\n" + rep3QCM;
         }else{
-            output += texteQCM + "\n\n" + repBonQCM + "\n" + rep1QCM + "\n" + rep2QCM + "\n" + rep3QCM;
+            output += repBonQCM + "\n" + rep1QCM + "\n" + rep2QCM + "\n" + rep3QCM;
         }
         output += "\n";
         return output;
