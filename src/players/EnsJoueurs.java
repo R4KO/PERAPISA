@@ -45,6 +45,12 @@ public class EnsJoueurs implements Phase {
     public void afficher() {
         System.out.println(toString());
     }
+    public Joueur getelement(int x){
+    
+        return joueurs.elementAt(x);
+    
+    }
+    
 
     @Override
     public String toString() {
