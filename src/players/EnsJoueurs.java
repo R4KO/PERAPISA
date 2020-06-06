@@ -98,7 +98,7 @@ public class EnsJoueurs implements Phase {
         for(int i=0;i<Joueurs.length;i++){
             Question q = questions.selectionnerQuestion(1);
             q.afficher();
-            
+
             //TODO : gérer les points selon bonne ou mauvaise réponse
         }
         x++;
