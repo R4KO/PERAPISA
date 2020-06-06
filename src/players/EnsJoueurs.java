@@ -1,9 +1,14 @@
 package players;
 
+import question.ListeQuestions;
+import question.Question;
+import question.Themes;
+
 import java.util.Vector;
 
 public class EnsJoueurs implements Phase {
     private Vector<Joueur> joueurs;
+    int phase=1;
 
     public EnsJoueurs() {
         joueurs = new Vector<>();
@@ -59,6 +64,49 @@ public class EnsJoueurs implements Phase {
             output += j.toString() + "\n";
         }
         return output;
+    }
+
+
+    @Override
+    public void phaseDeJeu(int x) {
+        Joueur[] Joueurs = selectionnerJoueurs();
+        Themes theme;
+        switch (x){
+            case 1:
+                premierephase(x,Joueurs);
+                break;
+            case 2:
+                secondephase(x,Joueurs);
+                break;
+            case 3:
+                finalphase(x,Joueurs);
+                break;
+        }
+
+    }
+
+    public void premierephase(int x,Joueur[] Joueurs){
+
+        /*ce que j'essaie maladroitement de faire :
+        je selectionne un theme
+        ensuite je selectionne la liste de questions correspondants à ce theme
+        je selectionne une question de niveau 1 pour la poser à un joueurje 
+         */
+        Themes theme = new Themes();
+        theme.selectionnerTheme();
+        ListeQuestions questions = new ListeQuestions(theme);
+        questions.selectionnerQuestion(1);
+
+        x++;
+        phaseDeJeu(x);
+    }
+
+    public void secondephase(int x,Joueur[] Joueurs){
+
+    }
+
+    public void finalphase(int x,Joueur[] Joueurs){
+
     }
 
     @Override

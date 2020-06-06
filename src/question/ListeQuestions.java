@@ -9,6 +9,10 @@ public class ListeQuestions {
         list = new ArrayList<>();
     }
 
+    public ListeQuestions(Themes themes){
+        list = new ArrayList<Question>();
+    }
+
     public void afficher() {
         for (Question q : list) {
             q.afficher();
@@ -23,7 +27,7 @@ public class ListeQuestions {
         list.remove(q);
     }
 
-    public Question selectionnerQuestion() {
+    public Question selectionnerQuestion(int niveaux) {
         /// TODO: séletionner la question
         return null;
     }
