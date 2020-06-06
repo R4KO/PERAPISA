@@ -90,13 +90,17 @@ public class EnsJoueurs implements Phase {
         /*ce que j'essaie maladroitement de faire :
         je selectionne un theme
         ensuite je selectionne la liste de questions correspondants à ce theme
-        je selectionne une question de niveau 1 pour la poser à un joueurje 
+        je selectionne une question de niveau 1 pour la poser à un joueurje
          */
         Themes theme = new Themes();
         theme.selectionnerTheme();
         ListeQuestions questions = new ListeQuestions(theme);
-        questions.selectionnerQuestion(1);
-
+        for(int i=0;i<Joueurs.length;i++){
+            Question q = questions.selectionnerQuestion(1);
+            q.afficher();
+            
+            //TODO : gérer les points selon bonne ou mauvaise réponse
+        }
         x++;
         phaseDeJeu(x);
     }
