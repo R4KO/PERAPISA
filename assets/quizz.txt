@@ -252,7 +252,7 @@ Emmanuel Petit
 
 rc
 informatique
-1
+3
 Quelle année a vu la naissance de l'Internet ?
 1969
 
@@ -264,13 +264,13 @@ Un virus
 
 rc
 informatique
-3
+1
 Ecrivez l'intrus parmi Linux, Word, Windows, Mac OS :
 Word
 
 rc
 jeuxvidéo
-1
+3
 En quelle année le premier jeu vidéo a-t-il été créé ?
 1962
 
@@ -282,7 +282,7 @@ Japon
 
 rc
 jeuxvidéo
-3
+1
 Comment s'appelle le célèbre hérisson bleu qui court très vite ?
 Sonic
 
@@ -365,7 +365,6 @@ Que mange les termites ?
 Du bois
 Des excréments
 Des graines
-Du bois
 Des larves de fourmis
 
 qcm
@@ -375,7 +374,6 @@ Quel oiseau africain ne vole pas, mais court très vite ?
 L'autruche
 Le vautour
 Le calao
-L'autruche
 Le barbican bidenté
 
 qcm
@@ -384,7 +382,6 @@ animaux
 Lequel de ces crustacés vit en eau douce ?
 L'écrevisse
 Le homard
-L'écrevisse
 Le crabe
 Le bernard l'hermite
 
@@ -396,7 +393,6 @@ La baleine
 Le requin
 La tortue
 Le morse
-La baleine
 
 qcm
 animaux
@@ -404,7 +400,6 @@ animaux
 Combien de pattes possèdent les insectes ?
 6
 4
-6
 8
 10
 
@@ -416,7 +411,6 @@ Des dents
 Des cornes
 Des griffes
 Des perchoirs pour oiseaux
-Des dents
 
 qcm
 animaux
@@ -424,7 +418,6 @@ animaux
 Que mange le requin baleine ?
 Du plancton
 Des plongeurs
-Du plancton
 Des sardines
 Des calamars
 
@@ -434,7 +427,6 @@ animaux
 Pourquoi le caméléon change-t-il de couleur ?
 Pour communiquer
 Pour se protéger de la chaleur
-Pour communiquer
 Pour être plus beau
 Pour annoncer le soleil ou la pluie
 
@@ -445,7 +437,6 @@ Quel mammifère marin est un cousin de l'éléphant ?
 Le lamantin
 La baleine
 L'éléphant de mer
-Le lamantin
 Le poisson-éléphant
 
 qcm
@@ -454,7 +445,6 @@ animaux
 Que mange le gorille ?
 Des plantes
 Des insectes
-Des plantes
 De la viande
 Du poisson
 
@@ -465,7 +455,6 @@ Où vit le diable de Tasmanie ?
 En Australie
 En Afrique
 En Asie
-En Australie
 Nulle part,c'est un personnage de dessin animé
 
 qcm
@@ -474,7 +463,6 @@ animaux
 Où vit le bœuf musqué?
 Dans la toundra
 Sur la banquise
-Dans la toundra
 Dans la forêt
 Dans la savane
 
@@ -485,7 +473,6 @@ Comment se nomme notre Galaxie ?
 La Voie Lactée
 Andromède
 Orion
-La Voie Lactée
 La Galaxie du Têtard
 
 qcm
@@ -494,7 +481,6 @@ astronomie
 Quel est le nom du premier homme à avoir marché sur la Lune ?
 Neil Armstrong
 Buzz Aldrin
-Neil Armstrong
 Lance Armstrong
 Tintin
 
@@ -505,7 +491,6 @@ Combien parcoure-t-on de km en 1 seconde à la vitesse de la lumière ?
 300 000 km/sec
 3000 km/sec
 30 000 km/sec
-300 000 km/sec
 300 000 m/sec
 
 qcm
@@ -515,7 +500,6 @@ Comment appelle-t-on la température la plus froide connue ?
 Le zéro absolu
 Le point zéro
 La température frigidissimi
-Le zéro absolu
 Le zéro freeze
 
 qcm
@@ -526,7 +510,6 @@ Quand le premier homme a-t-il marché sur la Lune ?
 21 juillet 1967
 2 juillet 1967
 20 juillet 1969
-21 juillet 1969
 
 qcm
 astronomie
@@ -535,14 +518,12 @@ Comment se nomme l'étoile la plus proche de notre système solaire ?
 Proxima du Centaure
 Jupiter
 La grande Ourse
-Proxima du Centaure
 Pégasus
 
 qcm
 astronomie
 2
 A quelle distance se situe l'étoile la plus proche du système solaire ?
-5 années lumière
 5 années lumière
 3 années lumière
 1 année lumière
@@ -555,7 +536,6 @@ Comment se nomme le premier homme à avoir été dans l'espace ?
 Youri Gagarine
 Neil Armstrong
 Buzz Aldrin
-Youri Gagarine
 Yvan Laïka
 
 qcm
@@ -565,7 +545,6 @@ Quelle est la distance Terre-Soleil ?
 150 millions de km
 1 année lumière
 100 millions de km
-150 millions de km
 300 millions de km
 
 qcm
@@ -575,7 +554,6 @@ Combien y a-t-il de planètes telluriques dans le système solaire ?
 4
 0
 3
-4
 5
 
 qcm
@@ -585,7 +563,6 @@ Combien y a-t-il de planètes gazeuses dans le système solaire ?
 4
 2
 3
-4
 6
 
 qcm
@@ -594,7 +571,6 @@ astronomie
 Quel est le temps d'attente entre deux passages de la comète de Halley ?
 76 ans
 56 ans
-76 ans
 176 ans
 1760 ans
 
@@ -604,7 +580,6 @@ capitale
 Quelle est la capitale de l’Irlande ?
 Dublin
 Belfast
-Dublin
 Glasgow
 Cork
 
@@ -616,7 +591,6 @@ Madrid
 Barcelone
 Lisbonne
 Séville
-Madrid
 
 qcm
 capitale
@@ -626,7 +600,6 @@ Paris
 Bordeaux
 Lyon
 Marseille
-Paris
 
 qcm
 capitale
@@ -636,7 +609,6 @@ Rome
 Milan
 Parme
 Naples
-Rome
 
 qcm
 capitale
@@ -644,7 +616,6 @@ capitale
 Quelle est la capitale du Danemark ?
 Copenhague
 Oslo
-Copenhague
 Stockholm
 Helsinki
 
@@ -655,7 +626,6 @@ Quelle est la capitale de l’Ukraine ?
 Kiev
 Chisinau
 Minsk
-Kiev
 Belgrade
 
 qcm
@@ -664,7 +634,6 @@ capitale
 Quelle est la capitale de la Roumanie ?
 Budapest
 Bucarest
-Budapest
 Budarest
 Belgrade
 
@@ -677,7 +646,6 @@ Athènes
 Amsterdam
 Le Pirée
 Moussaka
-Athènes
 
 qcm
 capitale
@@ -686,7 +654,6 @@ Quelle est la capitale du Luxembourg ?
 Luxembourg
 Varsovie
 Sarrebruck
-Luxembourg
 Bratislava
 
 qcm
@@ -696,7 +663,6 @@ Quelle est la capitale de l’Albanie ?
 Tirana
 Skopje
 Sofia
-Tirana
 Dubrovnik
 
 qcm
@@ -705,7 +671,6 @@ capitale
 Quelle est la capitale de l’Estonie ?
 Tallinn
 Minsk
-Tallinn
 Riga
 Vilnius
 
@@ -715,7 +680,6 @@ capitale
 Quelle est la capitale de la Croatie ?
 Zagreb
 Zadar
-Zagreb
 Sarajevo
 Bratislava
 
@@ -727,7 +691,6 @@ Les joueurs de l’AS Saint-Étienne
 Les joueurs du FC Nantes
 Les joueurs de l’AJ Auxerre
 Les joueurs du PSG
-Les joueurs de l’AS Saint-Étienne
 
 qcm
 football
@@ -737,7 +700,6 @@ Combien y a-t-il de clubs en Ligue 1 (ancienne "Division 1") ?
 25
 18
 30
-20
 
 qcm
 football
@@ -745,7 +707,6 @@ football
 Dans quel stade joue l’Olympique de Marseille ?
 Stade Vélodrome
 Stade Félix-Bollaert
-Stade Vélodrome
 Stade de Gerland
 Stade Pierre-de-Coubertin
 
@@ -757,7 +718,6 @@ Association sportive
 Aviron stadium
 Athletic sports
 Athletic stadium
-Association sportive
 
 qcm
 football
@@ -767,7 +727,6 @@ L’Olympique lyonnais
 L’AS Saint-Étienne
 L’Olympique de Marseille
 L'AS Monaco
-L’Olympique lyonnais
 
 qcm
 football
@@ -775,7 +734,6 @@ football
 Quel club a remporté la Ligue des Champions en 1993 contre le Milan AC ?
 L’Olympique de Marseille
 L’AS Saint-Étienne
-L’Olympique de Marseille
 Le RC Lens
 L'Olympique lyonnais
 
@@ -787,7 +745,6 @@ Les joueurs du FCG Bordeaux
 Les joueurs du FC Lorient
 Les joueurs du FC Sochaux
 Les joueurs du FC Libourne
-Les joueurs du FCG Bordeaux
 
 qcm
 football
@@ -797,7 +754,6 @@ Racing club
 Race club
 Reim club
 Running club
-Racing club
 
 qcm
 football
@@ -807,7 +763,6 @@ Les joueurs du RC Lens
 Les joueurs du FC Gueugnon
 Les joueurs du FC Sochaux
 Les joueurs du Valenciennes FC
-Les joueurs du RC Lens
 
 qcm
 football
@@ -817,7 +772,6 @@ Athletic club
 Association club
 Aviron club
 Academic club
-Athletic club
 
 qcm
 football
@@ -825,7 +779,6 @@ football
 Quel club est en première division depuis le plus grand nombre de saisons consécutives (depuis 1974) ?
 Le Paris Saint-Germain FC
 L’AS Monaco
-Le Paris Saint-Germain FC
 Le Havre AC
 L'Olympique lyonnais
 
@@ -837,7 +790,6 @@ L’AS Saint-Étienne
 L’Olympique de Marseille
 L’Olympique lyonnais
 Le PSG
-L’AS Saint-Étienne
 
 qcm
 informatique
@@ -847,7 +799,6 @@ HTML (Hypertext Markup Language)
 HTTP (Hypertext Transfer Protocol)
 Java
 JavaScript
-HTML (Hypertext Markup Language)
 
 qcm
 informatique
@@ -856,7 +807,6 @@ informatique
 À 8 bits
 À 4 bytes
 À 8 bytes
-À 8 bits
 À 10 bits
 
 qcm
@@ -866,7 +816,6 @@ Comment appelle-t-on l´écran de l’ordinateur ?
 Le moniteur
 L´unité centrale
 Le CPU
-Le moniteur
 Le screenshot
 
 qcm
@@ -877,7 +826,6 @@ Un processeur
 Une carte video
 Un disque dur
 Un Chip Par Unité
-Un processeur
 
 qcm
 informatique
@@ -886,7 +834,6 @@ Comment s’appelle la technique utilisée par les fraudeurs qui consiste à dé
 Le phishing
 Le spamdexing
 Le backdoor
-Le phishing
 Le skimming
 
 qcm
@@ -897,7 +844,6 @@ Un numéro qui identifie chaque matériel informatique (ordinateur, routeur, imp
 Le protocole de communication utilisé sur Internet
 L’adresse d’un site web, commençant par "http://"
 C'est une adresse avec un Indice de Protection à connaitre pour se connecter
-Un numéro qui identifie chaque matériel informatique (ordinateur, routeur, imprimante) connecté à un réseau informatique
 
 qcm
 informatique
@@ -907,7 +853,6 @@ Combien vaut 1 Mo (mégaoctet) ?
 100 kilo octets
 1000 octets
 1024 octets
-1 million d’octets
 
 qcm
 informatique
@@ -916,7 +861,6 @@ Que signifie l’action "Drag and Drop" ?
 Glisser/déposer
 Copier/coller
 Couper/déposer
-Glisser/déposer
 Sélectionner/Agrandir
 
 qcm
@@ -925,7 +869,6 @@ informatique
 Quelle est la combinaison de touches qui permet de sélectionner tous les fichiers d’un répertoire sous Windows ?
 Ctrl + A
 Ctrl + V
-Ctrl + A
 Ctrl + T
 Alt + T
 
@@ -935,7 +878,6 @@ informatique
 En quelle unité mesure-t-on la fréquence (nombre de cycles par seconde) d’un microprocesseur ?
 En GHz (gigahertz)
 En Go (gigaoctet)
-En GHz (gigahertz)
 En MIPS (million d’instructions par seconde)
 En PPM (Page Per Minute)
 
@@ -946,7 +888,6 @@ Comment s’appelle un logiciel malveillant installé dans un ordinateur dans le
 Un spyware
 Un virus
 Un spam
-Un spyware
 Un malware
 
 qcm
@@ -956,7 +897,6 @@ Comment appelle-t-on un logiciel dont l’utilisateur doit rétribuer l’auteur
 Un shareware
 Un freeware
 Un logiciel Open Source
-Un shareware
 Un ransomeware
 
 qcm
@@ -965,7 +905,6 @@ jeuxvidéo
 Parmi les jeux suivants, lequel n’a pas été adapté à partir d’un livre ?
 Resident Evil
 The Witcher
-Resident Evil
 Shadowrun
 Bioshock
 
@@ -973,7 +912,6 @@ qcm
 jeuxvidéo
 1
 Le jeu de combat Tekken est sorti en premier...
-Sur borne d’arcade
 Sur borne d’arcade
 Sur NES
 Sur PlayStation
@@ -987,7 +925,6 @@ Vol de voiture
 Burnout
 Conduite dangereuse
 Conduite de voiture
-Vol de voiture
 
 qcm
 jeuxvidéo
@@ -997,13 +934,11 @@ Donkey Kong
 Super Mario
 Super Mario Bros
 Mario Party
-Donkey Kong
 
 qcm
 jeuxvidéo
 2
 La saga Assassin’s Creed est inspirée des...
-Nizârites
 Nizârites
 Néophytes
 Azyrites
@@ -1016,7 +951,6 @@ Le créateur de Zelda a choisi le nom de la princesse pour faire référence à 
 Francis Scott Fitzgerald
 Robin Williams
 Michael Owen
-Francis Scott Fitzgerald
 J.R.R. Tolkien
 
 qcm
@@ -1026,7 +960,6 @@ Sur quel support Prince of Persia est sorti initialement ?
 Sur Apple II
 Sur NES
 Sur PC
-Sur Apple II
 Sur Amstrad
 
 qcm
@@ -1037,7 +970,6 @@ Un documentaire planète Terre sur les fourmis
 Un documentaire sur les extraterrestres
 Un documentaire apocalypse sur la guerre
 Un documentaire sur l’impact écologique de l’Homme
-Un documentaire planète Terre sur les fourmis
 
 qcm
 jeuxvidéo
@@ -1047,13 +979,11 @@ n’est pas une adaptation
 est adaptée d’un livre
 est adaptée d’un film
 est adaptée d'une série
-n’est pas une adaptation
 
 qcm
 jeuxvidéo
 3
 Le jeu Counter Strike dérive de quel autre jeu ?
-Half life
 Half life
 Splinter Cell
 Call of Duty
@@ -1065,7 +995,6 @@ jeuxvidéo
 Final Fantasy XV a été initialement annoncé comme étant...
 Final Fantasy versus XIII
 Final Fantasy versus XII-4
-Final Fantasy versus XIII
 Final Fantasy XIII
 Final Fantasy XV
 
@@ -1077,13 +1006,11 @@ Wasteland
 Homeland
 Fallen
 Falland
-Wasteland
 
 qcm
 mathématiques
 1
 Quelle est la somme des angles d’un triangle ?
-180°
 180°
 360°
 120°
@@ -1095,7 +1022,6 @@ mathématiques
 À combien de secondes correspondent 1 heure et 10 minutes ?
 4200
 3700
-4200
 70
 4500
 
@@ -1107,7 +1033,6 @@ Trouver Y dans l’équation 4Y - 3 = 9 :
 4
 2
 6
-3
 
 qcm
 mathématiques
@@ -1117,13 +1042,11 @@ a deux côtés de même longueur
 a un angle droit
 a deux angles dorit
 a ses trois côtés de même longueur
-a deux côtés de même longueur
 
 qcm
 mathématiques
 2
 À combien est égal 6/8 ?
-0,75
 0,75
 1,33
 0,53
@@ -1135,7 +1058,6 @@ mathématiques
 À combien est égal 2 + 3 x 5 ?
 17
 25
-17
 15
 30
 
@@ -1146,7 +1068,6 @@ mathématiques
 0,001
 1000
 0,01
-0,001
 0,1
 
 qcm
@@ -1155,7 +1076,6 @@ mathématiques
 Quel est le nom du théorème suivant : "dans un triangle rectangle, le carré de l’hypoténuse est égal à la somme des carrés des deux autres côtés" ?
 Théorème de Pythagore
 Théorème d’Euclide
-Théorème de Pythagore
 Théorème de Bellman
 Théorème de Thalès
 
@@ -1167,7 +1087,6 @@ réel
 décimal
 rationnel
 irréel
-réel
 
 qcm
 mathématiques
@@ -1175,7 +1094,6 @@ mathématiques
 Est-ce que la soustraction est commutative ?
 Non
 Oui
-Non
 Peut-être
 Je ne sais pas
 
@@ -1183,7 +1101,6 @@ qcm
 mathématiques
 3
 À combien est égal le cosinus de 60° ?
-0,5
 0,5
 0,75
 0,45
@@ -1197,7 +1114,6 @@ Laquelle de ces phrases est vraie :
 Il y a un nombre fini de nombres premiers
 Tous les nombres impairs sont premiers
 Le pgcd de 1 et 11 est 2
-2 est le seul nombre premier pair
 
 qcm
 musique
@@ -1207,7 +1123,6 @@ Yannick Noah
 Olivier Delaitre
 Richard Virenque
 Lance Armstrong
-Yannick Noah
 
 qcm
 musique
@@ -1215,7 +1130,6 @@ musique
 Qui a signé la BO du film Titanic ?
 Céline Dion
 Barbara Streisand
-Céline Dion
 Lara Fabian
 Lady Gaga
 
@@ -1226,7 +1140,6 @@ Lequel ne fait pas partie du groupe des Rolling Stones ?
 Paul Mc Cartney
 Keith Richards
 Mick Jagger
-Paul Mc Cartney
 Ronnie Wood
 
 qcm
@@ -1237,7 +1150,6 @@ Umbrella
 Irreplaceable
 Ring the alarm
 Blinding Lights
-Umbrella
 
 qcm
 musique
@@ -1247,7 +1159,6 @@ Michel Polnareff
 Francis Cabrel
 Jean-Jacques Goldman
 Johnny Halliday
-Michel Polnareff
 
 qcm
 musique
@@ -1256,7 +1167,6 @@ Quel groupe de cinq filles a révolutionné la planète pop ?
 Spice girls
 Destiny's Child
 Pussicat Dolls
-Spice girls
 Little Mix
 
 qcm
@@ -1265,7 +1175,6 @@ musique
 Quel groupe est l’auteur du titre ‘Going home’ ?
 Ten years After
 Rolling Stones
-Ten years After
 Zz Top
 Les Beatles
 
@@ -1275,7 +1184,6 @@ musique
 Quel groupe est à l’origine du mouvement grunge ?
 Nirvana
 Metallica
-Nirvana
 Pearl Jam
 Indochine
 
@@ -1283,7 +1191,6 @@ qcm
 musique
 3
 Qui a gagné la Nouvelle Star 2007 ?
-Julien
 Julien
 Mounir
 Tigane
@@ -1297,7 +1204,6 @@ En quelle année est sorti l'album : Ray of Light's de Madonna ?
 1993
 1995
 1994
-1998
 
 qcm
 musique
@@ -1305,7 +1211,6 @@ musique
 Qui a été nommé meilleur artiste de l’année au MTV Europe Music Awards en 2006 ?
 Justin Timberlake
 Jay Z
-Justin Timberlake
 Lenny Kravitz
 Justin Bieber
 
@@ -1317,7 +1222,6 @@ Music of the sun
 A girl like me
 B-day
 Like a prayer
-Music of the sun
 
 qcm
 sciences
@@ -1325,7 +1229,6 @@ sciences
 Qu'est-ce que le diaphragme ?
 Un muscle
 Un os
-Un muscle
 Une articulation
 Un tendon
 
@@ -1337,13 +1240,11 @@ Pierre
 Jean
 Louis
 Thomas
-Pierre
 
 qcm
 sciences
 1
 Combien de satellites naturels gravitent autour de la Terre ?
-1
 1
 2
 3
@@ -1354,7 +1255,6 @@ sciences
 1
 Quel est le nom de l’unité de résistance électrique ?
 Ohm
-Ohm
 Ampère
 Volt
 Watt
@@ -1363,11 +1263,10 @@ qcm
 sciences
 2
 Comment nomme-t-on l’effet d’une glycémie trop élevée ?
-L’hypoglycémie
 L’hyperglycémie
 Les triglycérides
 La superglycémie
-L’hyperglycémie
+L’hypoglycémie
 
 qcm
 sciences
@@ -1375,7 +1274,6 @@ sciences
 Combien font 122 x 12 ?
 1464
 1212
-1464
 1636
 1420
 
@@ -1386,7 +1284,6 @@ Combien font 12 x 390 ?
 4680
 4567
 3998
-4680
 1420
 
 qcm
@@ -1397,13 +1294,11 @@ Le potassium
 Le lithium
 Le sodium
 L'uranium
-Le potassium
 
 qcm
 sciences
 3
 À quel inventeur doit-on la première calculatrice ?
-Blaise Pascal
 Blaise Pascal
 Henri Becquerel
 Einstein
@@ -1417,7 +1312,6 @@ La galène
 La bauxite
 La sidérite
 La cobblestone
-La galène
 
 qcm
 sciences
@@ -1427,7 +1321,6 @@ Avicenne
 Hippocrate
 Aristote
 Archimède
-Avicenne
 
 qcm
 sciences
@@ -1435,7 +1328,6 @@ sciences
 En quelle année aura lieu la prochaine apparition de la comète Haley ?
 2061
 2018
-2061
 2216
 2079
 
@@ -1443,7 +1335,6 @@ qcm
 sport
 1
 Qui est Zlatan Ibrahimovic ?
-Un joueur de football suédois
 Un joueur de football suédois
 Un joueur de football serbe
 Un joueur de football croate
@@ -1456,7 +1347,6 @@ Quelle est la périodicité des jeux Olympiques d’été ?
 Tous les quatre ans
 Tous les deux ans
 Tous les trois ans
-Tous les quatre ans
 Tous les cinq ans
 
 qcm
@@ -1466,7 +1356,6 @@ Lors du Tour de France cycliste, qui est récompensé d’un maillot blanc à po
 Le meilleur grimpeur
 Le meilleur jeune coureur
 Le meilleur sprinteur
-Le meilleur grimpeur
 Le meilleur descendeur
 
 qcm
@@ -1476,14 +1365,12 @@ Quel nom porte un terrain de tennis ?
 Le court
 La surface
 La terre battue
-Le court
 Le terrain
 
 qcm
 sport
 2
 Au judo, quel est le grade le plus élevé parmi ces ceintures ?
-Bleue
 Bleue
 Orange
 Verte
@@ -1494,7 +1381,6 @@ sport
 2
 Dans quelle discipline sportive s’est illustré Sebastien Loeb ?
 Rallye automobile sur route
-Rallye automobile sur route
 Motocross
 Cyclisme
 Course auto d’endurance sur circuit
@@ -1503,7 +1389,6 @@ qcm
 sport
 2
 Laquelle de ces courses à la voile est une course en solitaire ?
-Le Vendée Globe
 Le Vendée Globe
 La Volvo Océan Race
 La Renault Océan Race
@@ -1516,7 +1401,6 @@ En rugby, quel pays ne participe pas au tournoi des Six-Nations ?
 L’Espagne
 L’Angleterre
 La France
-L’Espagne
 Le Portugal
 
 qcm
@@ -1527,7 +1411,6 @@ Ski de fond et tir à la carabine
 Natation et course à pied
 Cyclisme et course à pied
 Cyclisme et natation
-Ski de fond et tir à la carabine
 
 qcm
 sport
@@ -1535,7 +1418,6 @@ sport
 Combien y a-t-il de périodes dans un match de hockey sur glace ?
 3 périodes de 20 minutes chacune
 2 périodes de 30 minutes chacun
-3 périodes de 20 minutes chacune
 2 période de 40 minutes chacune
 4 périodes de 15 minutes chacune
 
@@ -1547,7 +1429,6 @@ La National Basketball Association, principale ligue de basket-ball nord-améric
 La National Boxe Association, principale ligue de boxe nord-américaine
 La National Baseball Association, principale ligue de baseball nord-américaine
 La National Badminton Association, principale ligue de badminton nord-américaine
-La National Basketball Association, principale ligue de basket-ball nord-américaine
 
 qcm
 sport
@@ -1557,4 +1438,3 @@ L’escrime
 Le tir à l’arc
 L’équitation
 Le rugby
-L’escrime
