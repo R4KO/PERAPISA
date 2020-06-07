@@ -66,63 +66,8 @@ public class EnsJoueurs implements Phase {
     }
 
 
-    @Override
-    public void phaseDeJeu(int x) {
-        Joueur[] Joueurs = selectionnerJoueurs();
-        Themes theme;
-        switch (x){
-            case 1:
-                premierephase(x,Joueurs);
-                break;
-            case 2:
-                secondephase(x,Joueurs);
-                break;
-            case 3:
-                finalphase(x,Joueurs);
-                break;
-        }
 
-    }
 
-    public <T> void premierephase(int x, Joueur[] Joueurs){
-
-        /*ce que j'essaie maladroitement de faire :
-        je selectionne un theme
-        ensuite je selectionne la liste de questions correspondants à ce theme
-        je selectionne une question de niveau 1 pour la poser à un joueurje
-         */
-        Themes theme = new Themes();
-        theme.selectionnerTheme();
-        ListeQuestions questions = new ListeQuestions(theme);
-        for(int i=0;i<Joueurs.length;i++){
-            Question q = questions.selectionnerQuestion(1);
-            q.afficher();
-            if (isTheGoodAnswer(q,selectionReponse())){
-                Joueurs[i].mAJScore(2);
-            }
-        }
-        x++;
-        phaseDeJeu(x);
-    }
-
-    public void secondephase(int x,Joueur[] Joueurs){
-
-    }
-
-    public void finalphase(int x,Joueur[] Joueurs){
-
-    }
-
-    public <T> boolean isTheGoodAnswer(Question q, String reponse){
-        if (q.bonneReponse((T) q).equals(reponse)){
-            return true;
-        }
-        return false;
-    }
-    public String selectionReponse(){
-        //TODO: demander une réponse au joueur
-        return null;
-    }
 
     @Override
     public Joueur[] selectionnerJoueurs() {
