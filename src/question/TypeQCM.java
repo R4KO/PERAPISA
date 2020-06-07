@@ -48,6 +48,10 @@ public class TypeQCM extends TypeQuestion{
         }
     }
 
+    public String getTheme(){
+        return theme;
+    }
+
     @Override
     public void afficher() {          //Fonction d'affichage des questions et réponses de façon aléatoire
         System.out.println(toString());

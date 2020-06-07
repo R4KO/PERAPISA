@@ -12,16 +12,16 @@ public class Themes {
     }
 
     public void initialisationTheme(ArrayList<String> themes){
-        themes.add("Animaux");
-        themes.add("Astronomie");
-        themes.add("Capitale");
-        themes.add("Football");
-        themes.add("Mathématiques");
-        themes.add("Musique");
-        themes.add("Sciences");
-        themes.add("Sport");
-        themes.add("Jeux Vidéo");
-        themes.add("Informatique");
+        themes.add("animaux");
+        themes.add("astronomie");
+        themes.add("capitale");
+        themes.add("football");
+        themes.add("mathématiques");
+        themes.add("musique");
+        themes.add("sciences");
+        themes.add("sport");
+        themes.add("jeuxvidéo");
+        themes.add("informatique");
     }
 
     public Themes(String themeCourant) {
@@ -35,7 +35,12 @@ public class Themes {
 
     public String selectionnerTheme() {
         String nouveauTheme = themes.get(((int)(Math.random() * 100)) % themes.size());
+        modifierTheme(nouveauTheme);
         return nouveauTheme;
+    }
+
+    public String getThemeCourant(){
+        return themeCourant;
     }
 
     public void afficher() {

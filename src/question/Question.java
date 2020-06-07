@@ -19,7 +19,7 @@ public class Question <T extends TypeQuestion>{
     @Override
     public String toString(){
         String output = "";
-        output += "Niveau = " + nivQ + "\n" + "Thème: " + "\n" + enonceQ.toString();
+        output += enonceQ.toString();
         return output;
     }
 

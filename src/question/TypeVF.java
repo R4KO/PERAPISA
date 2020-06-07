@@ -20,6 +20,10 @@ public class TypeVF extends TypeQuestion {
         }
     }
 
+    public String getTheme(){
+        return theme;
+    }
+
     @Override
     public void afficher() {
         System.out.println(toString());

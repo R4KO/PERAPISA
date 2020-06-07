@@ -14,6 +14,19 @@ public class TypeRC extends TypeQuestion {
         reponse = sc.nextLine();
     }
 
+    public TypeRC(Scanner sc, String line) {
+        theme = line;
+        niveau = sc.nextInt();
+        sc.nextLine(); // important
+
+        proposition = sc.nextLine();
+        reponse = sc.nextLine();
+    }
+
+    public String getTheme(){
+        return theme;
+    }
+
     @Override
     public void afficher() {
         System.out.println(toString());
