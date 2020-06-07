@@ -73,4 +73,8 @@ public class TypeQCM extends TypeQuestion{
         output += "\n";
         return output;
     }
+
+    public String getRepBonQCM() {
+        return repBonQCM;
+    }
 }

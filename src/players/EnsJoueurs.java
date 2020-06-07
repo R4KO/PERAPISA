@@ -1,9 +1,8 @@
 package players;
 
-import question.ListeQuestions;
-import question.Question;
-import question.Themes;
+import question.*;
 
+import java.util.Objects;
 import java.util.Vector;
 
 public class EnsJoueurs implements Phase {
@@ -85,7 +84,7 @@ public class EnsJoueurs implements Phase {
 
     }
 
-    public void premierephase(int x,Joueur[] Joueurs){
+    public <T> void premierephase(int x, Joueur[] Joueurs){
 
         /*ce que j'essaie maladroitement de faire :
         je selectionne un theme
@@ -98,8 +97,9 @@ public class EnsJoueurs implements Phase {
         for(int i=0;i<Joueurs.length;i++){
             Question q = questions.selectionnerQuestion(1);
             q.afficher();
-
-            //TODO : gérer les points selon bonne ou mauvaise réponse
+            if (isTheGoodAnswer(q,selectionReponse())){
+                Joueurs[i].mAJScore(2);
+            }
         }
         x++;
         phaseDeJeu(x);
@@ -111,6 +111,17 @@ public class EnsJoueurs implements Phase {
 
     public void finalphase(int x,Joueur[] Joueurs){
 
+    }
+
+    public <T> boolean isTheGoodAnswer(Question q, String reponse){
+        if (q.bonneReponse((T) q).equals(reponse)){
+            return true;
+        }
+        return false;
+    }
+    public String selectionReponse(){
+        //TODO: demander une réponse au joueur
+        return null;
     }
 
     @Override

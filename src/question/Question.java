@@ -1,5 +1,7 @@
 package question;
 
+import java.util.Scanner;
+
 public class Question <T extends TypeQuestion>{
     private int numQ;
     private String themeQ;
@@ -23,5 +25,23 @@ public class Question <T extends TypeQuestion>{
 
     public void afficher() {
         System.out.println(toString());
+    }
+
+    public <T> String bonneReponse(T question) {
+        if (question instanceof TypeQCM) {
+            TypeQCM qcmquestion = new TypeQCM((Scanner) question);
+            return qcmquestion.getRepBonQCM();
+        } else if (question instanceof TypeRC) {
+            TypeRC rcquestion = new TypeRC((Scanner) question);
+            return rcquestion.getReponse();
+        } else if (question instanceof TypeVF) {
+            TypeVF vfquestion = new TypeVF((Scanner) question);
+            if (vfquestion.isReponse()) {
+                return "Vrai";
+            } else {
+                return "Faux";
+            }
+        }
+        return null;
     }
 }

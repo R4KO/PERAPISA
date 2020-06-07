@@ -42,4 +42,5 @@ public class Joueur {
     public String getEtat() {
         return etat;
     }
+
 }

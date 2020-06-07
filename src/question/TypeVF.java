@@ -24,4 +24,9 @@ public class TypeVF extends TypeQuestion {
     public void afficher() {
         System.out.println(toString());
     }
+
+    public boolean isReponse() {
+        return reponse;
+    }
+
 }

@@ -18,4 +18,8 @@ public class TypeRC extends TypeQuestion {
     public void afficher() {
         System.out.println(toString());
     }
+
+    public String getReponse() {
+        return reponse;
+    }
 }
