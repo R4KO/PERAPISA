@@ -5,7 +5,10 @@ abstract public class TypeQuestion {
     protected int niveau;
     protected String proposition = "";
 
+    abstract public boolean verifierReponse(String reponse);
+
     abstract public void afficher();
+
     @Override
     public String toString() {
         String output = "";

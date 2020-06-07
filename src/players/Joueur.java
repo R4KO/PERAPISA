@@ -18,6 +18,7 @@ public class Joueur {
     }
 
     public void mAJScore(int number) {
+        /// TODO: créer un objet statique (énumération) pour incrémenter le bon nombre de points
         score += number;
     }
 

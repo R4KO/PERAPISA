@@ -1,9 +1,5 @@
-import players.EnsJoueurs;
-import players.Joueur;
-import question.TypeQCM;
-import question.Question;
-import question.TypeRC;
-import question.TypeVF;
+import players.*;
+import question.*;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -14,6 +10,7 @@ public class Main {
 
         String path = "assets/";
 
+        /// TODO: LinkedLists
         ArrayList<TypeQCM> a = new ArrayList<>(); // QCM
         ArrayList<TypeVF> b = new ArrayList<>(); // Vrai/Faux
         ArrayList<TypeRC> c = new ArrayList<>(); // Répnses courtes

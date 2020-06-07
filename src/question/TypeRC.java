@@ -15,6 +15,11 @@ public class TypeRC extends TypeQuestion {
     }
 
     @Override
+    public boolean verifierReponse(String reponse) {
+        return reponse.equals(this.reponse);
+    }
+
+    @Override
     public void afficher() {
         System.out.println(toString());
     }

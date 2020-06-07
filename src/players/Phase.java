@@ -1,6 +1,6 @@
 package players;
 
 public interface Phase {
-    int phaseDeJeu = 1;
+    abstract public int phaseDeJeu();
     abstract public Joueur[] selectionnerJoueurs();
 }

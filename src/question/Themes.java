@@ -8,7 +8,6 @@ public class Themes {
 
     public Themes() {
         themes = new ArrayList<>();
-        initialisationTheme();
     }
 
     public void initialisationTheme(){
@@ -29,8 +28,10 @@ public class Themes {
         this.themeCourant = themeCourant;
     }
 
-    public void modifierTheme(String theme) {
-        themeCourant = theme;
+    public void modifierTheme(int i, String designation) {
+        /// TODO: trouver un sens à cette méthode
+        // i: numério du thème dans le tableau
+        //
     }
 
     public String selectionnerTheme() {

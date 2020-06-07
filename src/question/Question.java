@@ -24,4 +24,9 @@ public class Question <T extends TypeQuestion>{
     public void afficher() {
         System.out.println(toString());
     }
+
+    // Fonction qui vérifie si la réponse saisie est une bonne réponse
+    public boolean saisir(String reponse) {
+        return enonceQ.verifierReponse(reponse);
+    }
 }

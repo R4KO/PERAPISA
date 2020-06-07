@@ -49,6 +49,12 @@ public class TypeQCM extends TypeQuestion{
     }
 
     @Override
+    public boolean verifierReponse(String reponse) {
+        // Fonction qui vérifie si la réponse est la bonne
+        return reponse.equals(repBonQCM);
+    }
+
+    @Override
     public void afficher() {          //Fonction d'affichage des questions et réponses de façon aléatoire
         System.out.println(toString());
     }

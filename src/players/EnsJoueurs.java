@@ -12,16 +12,6 @@ public class EnsJoueurs implements Phase {
     public Joueur selectionnerJoueur() {
         // nombre aléatoire
         Joueur j =  joueurs.elementAt((int) (Math.random() * 100) % joueurs.size());
-        /*
-        if (!j.getEtat().equals("sélectionné")) {
-            // Sélectionné donc change d'état
-            j.changerEtat("sélectionné");
-            return j;
-        }
-        else {
-            selectionnerJoueur();
-        }
-        */
 
         if (j.getEtat().equals("sélectionné")) {
             selectionnerJoueur();
@@ -53,6 +43,12 @@ public class EnsJoueurs implements Phase {
             output += j.toString() + "\n";
         }
         return output;
+    }
+
+    @Override
+    public int phaseDeJeu() {
+        /// TODO: implémenter l'identification de la phase de jeu
+        return 0;
     }
 
     @Override
