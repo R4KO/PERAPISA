@@ -29,6 +29,9 @@ public class Joueur {
         System.out.println(toString());
     }
 
+    public String getNom(){ return this.nom; }
+
+
     @Override
     public String toString() {
         String output = "";

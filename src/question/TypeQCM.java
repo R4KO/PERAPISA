@@ -12,6 +12,10 @@ public class TypeQCM extends TypeQuestion{
     private String repBonQCM;           //réponse n°4 et bonne réponse
 
 
+    public TypeQCM(String enonce){
+
+    }
+
     //Constructeur avec paramètres
     public TypeQCM(Scanner sc) {
         theme = sc.nextLine();
@@ -52,6 +56,7 @@ public class TypeQCM extends TypeQuestion{
         return theme;
     }
 
+
     @Override
     public void afficher() {          //Fonction d'affichage des questions et réponses de façon aléatoire
         System.out.println(toString());
@@ -66,13 +71,13 @@ public class TypeQCM extends TypeQuestion{
         int i = (int) (Math.random() * 100);
 
         if (i % 4 == 0) {
-            output += texteQCM + "\n\n" + rep1QCM + "\n" + rep2QCM + "\n" + rep3QCM + "\n" + repBonQCM;
+            output += texteQCM + "\n\n a)" + rep1QCM + "\n b)" + rep2QCM + "\n c)" + rep3QCM + "\n d)" + repBonQCM;
         }else if(i % 4 == 1){
-            output += texteQCM + "\n\n" + rep1QCM + "\n" + rep2QCM + "\n" + repBonQCM + "\n" + rep3QCM;
+            output += texteQCM + "\n\n a)" + rep1QCM + "\n b)" + rep2QCM + "\n c)" + repBonQCM + "\n d)" + rep3QCM;
         }else if(i % 4 == 2){
-            output += texteQCM + "\n\n" + rep1QCM + "\n" + repBonQCM + "\n" + rep2QCM + "\n" + rep3QCM;
+            output += texteQCM + "\n\n a)" + rep1QCM + "\n b)" + repBonQCM + "\n c)" + rep2QCM + "\n d)" + rep3QCM;
         }else{
-            output += texteQCM + "\n\n" + repBonQCM + "\n" + rep1QCM + "\n" + rep2QCM + "\n" + rep3QCM;
+            output += texteQCM + "\n\n a)" + repBonQCM + "\n b)" + rep1QCM + "\n c)" + rep2QCM + "\n d)" + rep3QCM;
         }
         output += "\n";
         return output;

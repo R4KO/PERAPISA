@@ -28,13 +28,12 @@ public class EnsJoueurs implements Phase {
         */
 
         if (j.getEtat().equals("sélectionné")) {
-            selectionnerJoueur();
+            return selectionnerJoueur();
         }
         else {
             j.changerEtat("sélectionné");
             return j;
         }
-        return selectionnerJoueur();
     }
 
     public void creer() {
@@ -50,11 +49,8 @@ public class EnsJoueurs implements Phase {
         System.out.println(toString());
     }
     public Joueur getelement(int x){
-    
         return joueurs.elementAt(x);
-    
     }
-    
 
     @Override
     public String toString() {

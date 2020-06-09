@@ -3,7 +3,7 @@ package question;
 import java.util.ArrayList;
 
 public class ListeQuestions {
-    private ArrayList<Question> list;
+    private static ArrayList<Question> list;
 
     public ListeQuestions() {
         list = new ArrayList<>();
@@ -19,6 +19,10 @@ public class ListeQuestions {
         }
     }
 
+    public static ArrayList<Question> getList(){
+        return list;
+    }
+
     public void ajouter(Question q) {
         list.add(q);
     }
@@ -27,8 +31,10 @@ public class ListeQuestions {
         list.remove(q);
     }
 
-    public Question selectionnerQuestion(int niveaux) {
-        /// TODO: séletionner la question
+    public Question selectionnerQuestion(int niveau, int i) {
+        if(list.get(i).getNiveau() == niveau){
+            return list.get(i);
+        }
         return null;
     }
 }

@@ -1,5 +1,6 @@
 package question;
 
+import question.TypeQCM;
 import java.util.Scanner;
 
 public class Question <T extends TypeQuestion>{
@@ -16,6 +17,10 @@ public class Question <T extends TypeQuestion>{
         this.enonceQ = enonceQ;
     }
 
+    public T getEnonceQ(){
+        return this.enonceQ;
+    }
+
     @Override
     public String toString(){
         String output = "";
@@ -23,11 +28,16 @@ public class Question <T extends TypeQuestion>{
         return output;
     }
 
+    public int getNiveau(){
+        return this.nivQ;
+    }
+
     public void afficher() {
         System.out.println(toString());
     }
 
     public <T> String bonneReponse(T question) {
+        System.out.println(question instanceof TypeQCM);
         if (question instanceof TypeQCM) {
             TypeQCM qcmquestion = new TypeQCM((Scanner) question);
             return qcmquestion.getRepBonQCM();
@@ -43,5 +53,12 @@ public class Question <T extends TypeQuestion>{
             }
         }
         return null;
+    }
+
+    public <TypeQCM> String bonRepQCM(TypeQCM question){
+        question.TypeQCM qcmquestion = new question.TypeQCM((Scanner) question);
+
+        System.out.println("b");
+        return qcmquestion.getRepBonQCM();
     }
 }

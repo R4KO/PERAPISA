@@ -1,14 +1,12 @@
 import players.EnsJoueurs;
 import players.Joueur;
-<<<<<<< HEAD
 import question.Themes;
 import question.TypeQCM;
 import question.Question;
+import question.ListeQuestions;
 import question.TypeRC;
 import question.TypeVF;
-=======
 import question.*;
->>>>>>> master
 
 import java.io.*;
 import java.util.ArrayList;
@@ -24,7 +22,7 @@ public class Main {
         ArrayList<TypeRC> c = new ArrayList<>(); // Répnses courtes
 
 
-        ArrayList<Question> ListeTheme = new ArrayList<>(); // liste de question pour thème courant
+        ArrayList<String> bonReponse = new ArrayList<>(); // liste des réponses par rapport a un type
 
 
         // Initialisation des questions
@@ -68,13 +66,16 @@ public class Main {
         thema.selectionnerTheme();
         System.out.println(thema.getThemeCourant());
 
+        ListeQuestions questi = new ListeQuestions(thema);
+
         if(aleaType == 0) {
             System.out.println("--------------------- Type QCM ---------------------");
             for (TypeQCM e : a) {
                 if(e.getTheme().equals(thema.getThemeCourant())){
                     Question q = new Question(numq,e);
+                    bonReponse.add(e.getRepBonQCM());
                     numq += 1;
-                    ListeTheme.add(q);
+                    questi.ajouter(q);
                 }
             }
         }else if (aleaType == 1){
@@ -83,7 +84,7 @@ public class Main {
                 if(e.getTheme().equals(thema.getThemeCourant())){
                     Question q = new Question(numq,e);
                     numq += 1;
-                    ListeTheme.add(q);
+                    questi.ajouter(q);
                 }
             }
         }else{
@@ -92,7 +93,7 @@ public class Main {
                 if(e.getTheme().equals(thema.getThemeCourant())){
                     Question q = new Question(numq,e);
                     numq += 1;
-                    ListeTheme.add(q);
+                    questi.ajouter(q);
                 }
             }
         }
@@ -119,31 +120,76 @@ public class Main {
         */
 
         //Affichage de l'Arraylist créé
-        for(Question j: ListeTheme){
-            j.afficher();
-        }
-
+        questi.afficher();
+        System.out.println(bonReponse);
 
         // Création de l'ensemble des joueurs
         EnsJoueurs e = new EnsJoueurs();
         e.creer();
         e.afficher();
 
-        System.out.println("---------------------Sélection des joueurs---------------------");
-        for (Joueur j : e.selectionnerJoueurs()) {
-            j.afficher();
-        }
-<<<<<<< HEAD
-    }
-=======
-    phaseDeJeu(e);
-    }
+        //System.out.println("---------------------Sélection des joueurs---------------------");
+        //for (Joueur j : e.selectionnerJoueurs()) {
+         //   j.afficher();
+       // }
 
+        e.selectionnerJoueurs();
+        e.afficher();
+
+        //for(Joueur j: e){
+
+        //}
+        System.out.println(bonReponse.get(10));
+        System.out.println("Joueur");
+
+
+        for(int j = 0; j < 20; j++){
+            if(e.getelement(j).getEtat().equals("sélectionné")){
+                jeuPhase1(questi,bonReponse,e.getelement(j),aleaType);
+            }
+        }
+
+        //phaseDeJeu(e);
+    }
+    //phaseDeJeu(e);
+//}
+
+    public static void jeuPhase1(ListeQuestions questi,ArrayList<String> bonReponse, Joueur j, int type){
+        System.out.println("Joueur " + j.getNom() + " c'est à vous de jouer");
+        //Scanner sc = new Scanner(System.in);
+        String reponse = "jean";
+        if(type == 0){
+            //type = QCM
+            int i = 0;
+            Question<TypeQCM> selec = null;
+            while(selec == null) {
+                i = (int) (Math.random() * 100 % ListeQuestions.getList().size());
+                System.out.println(i);
+                selec = questi.selectionnerQuestion(1, i);
+            }
+            Question<TypeQCM> q = new Question<TypeQCM>(1, (TypeQCM) selec.getEnonceQ());
+            q.afficher();
+            System.out.println(bonReponse.get(i));
+            //estBonneReponseQCM(q,reponse);
+            //if(isTheGoodAnswer(q,reponse));
+        }else if (type == 1){
+            //type vrai/faux
+            Question<TypeVF> q= new Question<TypeVF>(1, (TypeVF) questi.selectionnerQuestion(1,1).getEnonceQ());
+            q.afficher();
+        }else{
+            //type réponse courte
+            Question<TypeRC> q= new Question<TypeRC>(1, (TypeRC) questi.selectionnerQuestion(1,1).getEnonceQ());
+            q.afficher();
+        }
+
+    }
 
     public static void phaseDeJeu(EnsJoueurs e) {
         Joueur[] Joueurs = e.selectionnerJoueurs();
         Themes theme;
         premierephase(Joueurs);
+        secondephase(Joueurs);
+        finalphase(Joueurs);
     }
 
     public static <T> void premierephase(Joueur[] Joueurs){
@@ -151,30 +197,36 @@ public class Main {
         /*ce que j'essaie maladroitement de faire :
         je selectionne un theme
         ensuite je selectionne la liste de questions correspondants à ce theme
-        je selectionne une question de niveau 1 pour la poser à un joueurje
+        je selectionne une question de niveau 1 pour la poser à un joueur
          */
+        System.out.println("a");
         Themes theme = new Themes();
-        theme.selectionnerTheme();
+        System.out.println(theme.selectionnerTheme());
         ListeQuestions questions = new ListeQuestions(theme);
         for(int i=0;i<Joueurs.length;i++){
-            Question q = questions.selectionnerQuestion(1);
-            q.afficher();
+            Question q = questions.selectionnerQuestion(1,1);
+            //q.afficher();
             if (isTheGoodAnswer(q,selectionReponse())){
                 Joueurs[i].mAJScore(2);
             }
         }
-        secondephase(Joueurs);
     }
 
     public static void secondephase(Joueur[] Joueurs){
-        finalphase(Joueurs);
     }
 
     public static void finalphase(Joueur[] Joueurs){
 
     }
 
+    public static <TypeQCM> boolean estBonneReponseQCM(Question q, String reponse){
+        System.out.println("a ");
+        System.out.println("a " + q.bonRepQCM(q.getEnonceQ()));
+        return true;
+    }
+
     public static <T> boolean isTheGoodAnswer(Question q, String reponse){
+        System.out.println("a " + q.bonneReponse((T) q));
         if (q.bonneReponse((T) q).equals(reponse)){
             return true;
         }
@@ -185,5 +237,4 @@ public class Main {
         return null;
     }
 
->>>>>>> master
 }
