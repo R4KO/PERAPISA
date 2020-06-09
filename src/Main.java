@@ -15,7 +15,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
 
-        String path = "build/classes/";
+        String path = "assets/";
+
+        Scanner sce = new Scanner (System.in);
 
         ArrayList<TypeQCM> a = new ArrayList<>(); // QCM
         ArrayList<TypeVF> b = new ArrayList<>(); // Vrai/Faux
@@ -65,6 +67,12 @@ public class Main {
         Themes thema = new Themes();
         thema.selectionnerTheme();
         System.out.println(thema.getThemeCourant());
+
+        System.out.println(thema.getListTheme());
+        //On supprime dans la liste le thème pour ne pas le réutiliser
+        thema.enleverTheme(thema.getThemeCourant());
+
+        System.out.println(thema.getListTheme());
 
         ListeQuestions questi = new ListeQuestions(thema);
 
@@ -146,7 +154,7 @@ public class Main {
         //}
         //System.out.println(bonReponse.get(10));
         //System.out.println("Joueur");
-
+                                        // Phase n°1
 
         for(int j = 0; j < 20; j++){
             if(e.getelement(j).getEtat().equals("sélectionné")){
@@ -155,6 +163,102 @@ public class Main {
                 System.out.println("\n\n");
             }
         }
+
+        int nbMin = 20;
+        Joueur jElim = null;
+        for(int j = 0; j < 20; j++){
+            if(e.getelement(j).getEtat().equals("sélectionné")){
+                if(e.getelement(j).getScore() < nbMin){
+                    jElim = e.getelement(j);
+                    nbMin = e.getelement(j).getScore();
+                }else if(e.getelement(j).getScore() == nbMin){
+                    //TODO: faire le temps pour vérifier la deuxième condition
+                }
+            }
+        }
+        jElim.changerEtat("éliminé");
+        for(int j = 0; j < 20; j++){
+            if(e.getelement(j).getEtat().equals("sélectionné")){
+                e.getelement(j).changerEtat("gagnant");
+            }
+        }
+
+                                        // Phase n°2
+        ArrayList<String> themeP2 = new ArrayList<>();
+        int indexTheme = 0;
+        String themeCourantPhase2 = null;
+        Boolean verifTheme = false;
+        for(int j = 0; j < 6; j++){
+            themeCourantPhase2 = thema.selectionnerTheme();
+            themeP2.add(themeCourantPhase2);
+            thema.enleverTheme(themeCourantPhase2);
+        }
+
+        for(int j = 0; j < 20; j++){
+            if(e.getelement(j).getEtat().equals("gagnant")){
+                aleaType = (int) (Math.random() * 100) % 3;
+                System.out.println("aleatype =" + aleaType);
+                while(!verifTheme) {
+                    System.out.println("Vos choix sont: " + themeP2 + "\nQuel thème choisissez vous pour la prochaine question?");
+                    themeCourantPhase2 = sce.nextLine();
+                    verifTheme = false;
+                    for(int k = 0; k < themeP2.size(); k++){
+                        if(themeP2.get(k).equals(themeCourantPhase2)){
+                            verifTheme = true;
+                            indexTheme = k;
+                        }
+                    }
+                    if(!verifTheme){
+                        System.out.println("Ce n'est pas un thème valide, Veuillez réessayer\n");
+                    }
+                }
+                verifTheme = false;
+                thema.modifierTheme(themeCourantPhase2);
+                System.out.println(thema.getThemeCourant());
+                themeP2.remove(indexTheme);
+               /* if(aleaType == 0) {
+                    System.out.println("--------------------- Type QCM ---------------------");
+                    for (TypeQCM ele : a) {
+                        if(ele.getTheme().equals(thema.getThemeCourant())){
+                            Question q = new Question(numq,ele);
+                            bonReponse.add(ele.getRepBonQCM());
+                            numq += 1;
+                            questi.ajouter(q);
+                        }
+                    }
+                }else if (aleaType == 1){
+                    System.out.println("--------------------- Type VF ---------------------");
+                    for (TypeVF ele: b) {
+                        if(ele.getTheme().equals(thema.getThemeCourant())){
+                            Question q = new Question(numq,ele);
+                            if(ele.isReponse()){
+                                bonReponse.add("vrai");
+                            }else{bonReponse.add("faux");}
+                            //System.out.println(e.isReponse());
+                            numq += 1;
+                            questi.ajouter(q);
+                        }
+                    }
+                }else{
+                    System.out.println("--------------------- Type RC ---------------------");
+                    for (TypeRC ele : c) {
+                        if(ele.getTheme().equals(thema.getThemeCourant())){
+                            Question q = new Question(numq,ele);
+                            bonReponse.add(ele.getReponse());
+                            numq += 1;
+                            questi.ajouter(q);
+                        }
+                    }
+                }
+
+                jeuPhase2(questi,bonReponse,e.getelement(j),aleaType);
+                //e.getelement(j).afficher();
+                System.out.println("\n\n");
+                */
+
+            }
+        }
+
 
         //phaseDeJeu(e);
     }
@@ -227,6 +331,10 @@ public class Main {
                 System.out.println("dommage la bonne réponse était " + bonReponse.get(i)+ "\n");
             }
         }
+
+    }
+
+    public static void jeuPhase2(ListeQuestions questi,ArrayList<String> bonReponse, Joueur j, int type){
 
     }
     /*

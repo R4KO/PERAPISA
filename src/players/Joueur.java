@@ -31,6 +31,12 @@ public class Joueur {
 
     public String getNom(){ return this.nom; }
 
+    public String getEtat() {
+        return etat;
+    }
+
+    public int getScore(){ return score;}
+
 
     @Override
     public String toString() {
@@ -42,8 +48,5 @@ public class Joueur {
         return output;
     }
 
-    public String getEtat() {
-        return etat;
-    }
 
 }
