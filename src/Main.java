@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
 
-        String path = "assets/";
+        String path = "build/classes/";
 
         ArrayList<TypeQCM> a = new ArrayList<>(); // QCM
         ArrayList<TypeVF> b = new ArrayList<>(); // Vrai/Faux
