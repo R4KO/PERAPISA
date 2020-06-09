@@ -83,6 +83,10 @@ public class Main {
             for (TypeVF e: b) {
                 if(e.getTheme().equals(thema.getThemeCourant())){
                     Question q = new Question(numq,e);
+                    if(e.isReponse()){
+                        bonReponse.add("vrai");
+                    }else{bonReponse.add("faux");}
+                    //System.out.println(e.isReponse());
                     numq += 1;
                     questi.ajouter(q);
                 }
@@ -92,6 +96,7 @@ public class Main {
             for (TypeRC e : c) {
                 if(e.getTheme().equals(thema.getThemeCourant())){
                     Question q = new Question(numq,e);
+                    bonReponse.add(e.getReponse());
                     numq += 1;
                     questi.ajouter(q);
                 }
@@ -139,13 +144,15 @@ public class Main {
         //for(Joueur j: e){
 
         //}
-        System.out.println(bonReponse.get(10));
-        System.out.println("Joueur");
+        //System.out.println(bonReponse.get(10));
+        //System.out.println("Joueur");
 
 
         for(int j = 0; j < 20; j++){
             if(e.getelement(j).getEtat().equals("sélectionné")){
                 jeuPhase1(questi,bonReponse,e.getelement(j),aleaType);
+                e.getelement(j).afficher();
+                System.out.println("\n\n");
             }
         }
 
@@ -156,34 +163,73 @@ public class Main {
 
     public static void jeuPhase1(ListeQuestions questi,ArrayList<String> bonReponse, Joueur j, int type){
         System.out.println("Joueur " + j.getNom() + " c'est à vous de jouer");
-        //Scanner sc = new Scanner(System.in);
-        String reponse = "jean";
+        Scanner sc = new Scanner(System.in);
+        String reponse = "null";
+        int i = 0;
         if(type == 0){
             //type = QCM
-            int i = 0;
+            //On gère la selection de la question par rapport à un niveau donné
             Question<TypeQCM> selec = null;
             while(selec == null) {
                 i = (int) (Math.random() * 100 % ListeQuestions.getList().size());
-                System.out.println(i);
                 selec = questi.selectionnerQuestion(1, i);
             }
             Question<TypeQCM> q = new Question<TypeQCM>(1, (TypeQCM) selec.getEnonceQ());
+            //On affiche la question, ici dans le désordre pour ne pas que l'utilisateur sache ou est la bonne reponse
             q.afficher();
-            System.out.println(bonReponse.get(i));
-            //estBonneReponseQCM(q,reponse);
-            //if(isTheGoodAnswer(q,reponse));
+            //On gère la réponse donné par l'utilisateur
+            System.out.println("Réécrivez la réponse que vous trouver juste:");
+            reponse = sc.nextLine();
+            if(bonReponse.get(i).equals(reponse)){
+                j.mAJScore(2);
+                System.out.println("Bravo c'est la bonne réponse\n");
+            }else{
+                System.out.println("dommage la bonne réponse était " + bonReponse.get(i)+ "\n");
+            }
         }else if (type == 1){
             //type vrai/faux
-            Question<TypeVF> q= new Question<TypeVF>(1, (TypeVF) questi.selectionnerQuestion(1,1).getEnonceQ());
+            //On gère la selection de la question par rapport à un niveau donné
+            Question<TypeVF> selec = null;
+            while(selec == null){
+                i = (int) (Math.random() * 100 % ListeQuestions.getList().size());
+                selec = questi.selectionnerQuestion(1, i);
+            }
+            Question<TypeVF> q = new Question<TypeVF>(1, (TypeVF) selec.getEnonceQ());
+            //On affiche la question
             q.afficher();
+            //On gère la réponse donné par l'utilisateur
+            System.out.println("écrivez vrai ou faux:");
+            reponse = sc.nextLine();
+            if(bonReponse.get(i).equals(reponse)){
+                j.mAJScore(2);
+                System.out.println("Bravo c'est la bonne réponse\n");
+            }else{
+                System.out.println("dommage la bonne réponse était " + bonReponse.get(i) + "\n");
+            }
         }else{
             //type réponse courte
-            Question<TypeRC> q= new Question<TypeRC>(1, (TypeRC) questi.selectionnerQuestion(1,1).getEnonceQ());
+            //On gère la selection de la question par rapport à un niveau donné
+            Question<TypeRC> selec = null;
+            while(selec == null){
+                i = (int) (Math.random() * 100 % ListeQuestions.getList().size());
+                selec = questi.selectionnerQuestion(1, i);
+            }
+            Question<TypeRC> q= new Question<TypeRC>(1, (TypeRC) selec.getEnonceQ());
+            //On affiche la question
             q.afficher();
+            //On gère la réponse donné par l'utilisateur
+            System.out.println("écrivez la bonne réponse");
+            reponse = sc.nextLine();
+            if(bonReponse.get(i).equals(reponse)){
+                j.mAJScore(2);
+                System.out.println("Bravo c'est la bonne réponse\n");
+            }else{
+                System.out.println("dommage la bonne réponse était " + bonReponse.get(i)+ "\n");
+            }
         }
 
     }
-
+    /*
     public static void phaseDeJeu(EnsJoueurs e) {
         Joueur[] Joueurs = e.selectionnerJoueurs();
         Themes theme;
@@ -194,11 +240,11 @@ public class Main {
 
     public static <T> void premierephase(Joueur[] Joueurs){
 
-        /*ce que j'essaie maladroitement de faire :
+        ce que j'essaie maladroitement de faire :
         je selectionne un theme
         ensuite je selectionne la liste de questions correspondants à ce theme
         je selectionne une question de niveau 1 pour la poser à un joueur
-         */
+
         System.out.println("a");
         Themes theme = new Themes();
         System.out.println(theme.selectionnerTheme());
@@ -236,5 +282,6 @@ public class Main {
         //TODO: demander une réponse au joueur
         return null;
     }
+     */
 
 }

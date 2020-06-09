@@ -12,9 +12,6 @@ public class TypeQCM extends TypeQuestion{
     private String repBonQCM;           //réponse n°4 et bonne réponse
 
 
-    public TypeQCM(String enonce){
-
-    }
 
     //Constructeur avec paramètres
     public TypeQCM(Scanner sc) {

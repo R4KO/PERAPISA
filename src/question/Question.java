@@ -35,7 +35,7 @@ public class Question <T extends TypeQuestion>{
     public void afficher() {
         System.out.println(toString());
     }
-
+    /*
     public <T> String bonneReponse(T question) {
         System.out.println(question instanceof TypeQCM);
         if (question instanceof TypeQCM) {
@@ -61,4 +61,5 @@ public class Question <T extends TypeQuestion>{
         System.out.println("b");
         return qcmquestion.getRepBonQCM();
     }
+    */
 }
