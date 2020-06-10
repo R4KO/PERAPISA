@@ -2,7 +2,9 @@ import players.*;
 import question.*;
 
 import java.io.*;
+import java.lang.reflect.ParameterizedType;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -46,6 +48,16 @@ public class Main {
             }
         }
 
+
+        //tableau de tous les types de questions
+        String[] types = {a.get(0).getClass().getSimpleName(), b.get(0).getClass().getSimpleName(), c.get(0).getClass().getSimpleName()};
+        // tableau contenant les ArrayLists de question
+        ArrayList[] typesQuestion = {a, b, c};
+        // Types de questions qui seront posées
+        ArrayList<TypeQuestion> selected = typesQuestion[new Random().nextInt(typesQuestion.length)];
+        String typeSelected = selected.get(0).getClass().getSimpleName();
+
+        /*
         System.out.println("--------------------- Affichage des QCM---------------------");
         for (TypeQCM e: a) {
             e.afficher();
@@ -63,16 +75,40 @@ public class Main {
             System.out.println();
         }
 
+         */
+
 
         // Création de l'ensemble des joueurs
         EnsJoueurs e = new EnsJoueurs();
         e.creer();
-        e.afficher();
-
         System.out.println("---------------------Sélection des joueurs---------------------");
-        for (Joueur j : e.selectionnerJoueurs()) {
+        Joueur[] joueurs = e.selectionnerJoueurs();
+        //e.afficher();
+
+        for (Joueur j : joueurs) {
             j.afficher();
         }
 
+        // Choisir un thème
+        Themes themes = new Themes();
+
+        ListeQuestions questions = new ListeQuestions();
+
+        themes.initialisationTheme();
+        themes.selectionnerTheme();
+
+        System.out.println("Type sélectionné : " + typeSelected);
+        System.out.println("Thème courant : " + themes.getThemeCourant());
+
+        // Ajouteur les bonnes questions dans la liste peu importe le type
+        for (int i = 0; i < selected.size(); i++) {
+            TypeQuestion t = selected.get(i);
+            // Le thème de la question doit correspondre au thème sélectionné et le niveau doit correspondre à la phase
+            if (t.getTheme().toUpperCase().equals(themes.getThemeCourant().toUpperCase()) && t.getNiveau() == e.phaseDeJeu()) {
+                questions.ajouter(new Question(i, t));
+            }
+        }
+
+        questions.afficher();
     }
 }

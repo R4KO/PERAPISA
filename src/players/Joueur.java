@@ -17,9 +17,9 @@ public class Joueur {
         this.nom = nom;
     }
 
-    public void mAJScore(int number) {
-        /// TODO: créer un objet statique (énumération) pour incrémenter le bon nombre de points
-        score += number;
+    public void mAJScore(int phase) {
+        // On récupère directement le numéro de la phase en paramètre et on incrémente le bon nombre grâce au tableau statique de la class EnsJoueurs
+        score += EnsJoueurs.scores[phase];
     }
 
     public void changerEtat(String etat) {

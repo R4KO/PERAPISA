@@ -3,10 +3,13 @@ package players;
 import java.util.Vector;
 
 public class EnsJoueurs implements Phase {
+    static final int[] scores = {2, 3, 5};
     private Vector<Joueur> joueurs;
+    private int phaseCourante;
 
     public EnsJoueurs() {
         joueurs = new Vector<>();
+        phaseCourante = 1;
     }
 
     public Joueur selectionnerJoueur() {
@@ -47,12 +50,15 @@ public class EnsJoueurs implements Phase {
 
     @Override
     public int phaseDeJeu() {
-        /// TODO: implémenter l'identification de la phase de jeu
-        return 0;
+        return phaseCourante;
+    }
+
+    public void phaseSuivante() {
+        phaseCourante++;
     }
 
     @Override
     public Joueur[] selectionnerJoueurs() {
-        return new Joueur[]{selectionnerJoueur(), selectionnerJoueur(), selectionnerJoueur(), selectionnerJoueur()};
+        return new Joueur[] {selectionnerJoueur(), selectionnerJoueur(), selectionnerJoueur(), selectionnerJoueur()};
     }
 }

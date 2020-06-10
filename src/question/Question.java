@@ -16,13 +16,11 @@ public class Question <T extends TypeQuestion>{
 
     @Override
     public String toString(){
-        String output = "";
-        output += "Niveau = " + nivQ + "\n" + "Thème: " + "\n" + enonceQ.toString();
-        return output;
+        return enonceQ.toString();
     }
 
     public void afficher() {
-        System.out.println(toString());
+        System.out.println(toString() + "\n");
     }
 
     // Fonction qui vérifie si la réponse saisie est une bonne réponse

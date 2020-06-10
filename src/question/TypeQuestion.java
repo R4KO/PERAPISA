@@ -9,6 +9,14 @@ abstract public class TypeQuestion {
 
     abstract public void afficher();
 
+    public String getTheme() {
+        return theme;
+    }
+
+    public int getNiveau() {
+        return niveau;
+    }
+
     @Override
     public String toString() {
         String output = "";

@@ -1,6 +1,7 @@
 package question;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Themes {
     private ArrayList<String> themes;
@@ -28,14 +29,19 @@ public class Themes {
         this.themeCourant = themeCourant;
     }
 
-    public void modifierTheme(int i, String designation) {
+    public void modifierTheme(String designation) {
         /// TODO: trouver un sens à cette méthode
         // i: numério du thème dans le tableau
         //
+        themeCourant = designation;
     }
 
     public String selectionnerTheme() {
-        String nouveauTheme = themes.get(((int)(Math.random() * 100)) % themes.size());
+        String nouveauTheme = themes.get(new Random().nextInt(themes.size()));
+        modifierTheme(nouveauTheme);
+
+        // retirer le thème de la liste de thèmes
+        themes.remove(nouveauTheme);
         return nouveauTheme;
     }
 
@@ -43,6 +49,9 @@ public class Themes {
         System.out.println(toString());
     }
 
+    public String getThemeCourant() {
+        return themeCourant;
+    }
     @Override
     public String toString() {
         String output = "";
