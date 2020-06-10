@@ -30,10 +30,20 @@ public class Phase1Q extends javax.swing.JFrame {
     public static Initial ini;
     public static int te;
     public static boolean state;
+    public static boolean state2;
+    public static boolean state3;
+    public static boolean state4;
     public static int seconds;
     public static int minutes;
     public static int milliseconds;
     public static Thread t;
+    public static Thread u;
+    public static Thread v;
+    public static Thread w;
+    public static ArrayList<Integer> temp1 = new ArrayList();
+    public static ArrayList<Integer> temp2= new ArrayList();
+    public static ArrayList<Integer> temp3= new ArrayList();
+    public static ArrayList<Integer> temp4= new ArrayList();
     
     /**
      * Creates new form Phase1Q
@@ -134,6 +144,20 @@ public class Phase1Q extends javax.swing.JFrame {
         
         };
         t.start();
+        jLabel5.setVisible(false);
+        jLabel6.setVisible(false);
+        jLabel7.setVisible(false);
+        jLabel8.setVisible(false);
+        jLabel9.setVisible(false);
+        jLabel10.setVisible(false);
+        jLabel11.setVisible(false);
+        jLabel12.setVisible(false);
+        jLabel13.setVisible(false);
+        
+        
+        
+        
+        
     }
 
     /**
@@ -165,6 +189,15 @@ public class Phase1Q extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -257,6 +290,24 @@ public class Phase1Q extends javax.swing.JFrame {
 
         jLabel4.setText("00 ");
 
+        jLabel5.setText("00 :");
+
+        jLabel6.setText("00 :");
+
+        jLabel7.setText("00 ");
+
+        jLabel8.setText("00 :");
+
+        jLabel9.setText("00 :");
+
+        jLabel10.setText("00 ");
+
+        jLabel11.setText("00 :");
+
+        jLabel12.setText("00 :");
+
+        jLabel13.setText("00 ");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -300,6 +351,33 @@ public class Phase1Q extends javax.swing.JFrame {
                     .addContainerGap(929, Short.MAX_VALUE)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(11, 11, 11)))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(111, 111, 111)
+                    .addComponent(jLabel5)
+                    .addGap(39, 39, 39)
+                    .addComponent(jLabel6)
+                    .addGap(34, 34, 34)
+                    .addComponent(jLabel7)
+                    .addContainerGap(891, Short.MAX_VALUE)))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(121, 121, 121)
+                    .addComponent(jLabel8)
+                    .addGap(39, 39, 39)
+                    .addComponent(jLabel9)
+                    .addGap(34, 34, 34)
+                    .addComponent(jLabel10)
+                    .addContainerGap(881, Short.MAX_VALUE)))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(131, 131, 131)
+                    .addComponent(jLabel11)
+                    .addGap(39, 39, 39)
+                    .addComponent(jLabel12)
+                    .addGap(34, 34, 34)
+                    .addComponent(jLabel13)
+                    .addContainerGap(871, Short.MAX_VALUE)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -345,6 +423,30 @@ public class Phase1Q extends javax.swing.JFrame {
                     .addContainerGap(405, Short.MAX_VALUE)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(385, 385, 385)))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                    .addContainerGap(568, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel5)
+                        .addComponent(jLabel6)
+                        .addComponent(jLabel7))
+                    .addGap(284, 284, 284)))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                    .addContainerGap(578, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel8)
+                        .addComponent(jLabel9)
+                        .addComponent(jLabel10))
+                    .addGap(274, 274, 274)))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                    .addContainerGap(588, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel11)
+                        .addComponent(jLabel12)
+                        .addComponent(jLabel13))
+                    .addGap(264, 264, 264)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -364,6 +466,9 @@ public class Phase1Q extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         
+        jLabel5.setVisible(true);
+        jLabel6.setVisible(true);
+        jLabel7.setVisible(true);
        String choix = null;
        Enumeration elements = buttonGroup2.getElements();
        while(elements.hasMoreElements()){
@@ -373,16 +478,26 @@ public class Phase1Q extends javax.swing.JFrame {
                choix = button.getText();  
            }
        }
-       
+        state = false;
+        
         if(ini.bonReponse.get(te).equals(choix)){
         
             SelectionJoueur.tab[0].mAJScore(2);
             SelectionJoueur.tab[0].afficher(); 
-             JOptionPane.showMessageDialog(null, "bravo bonne réponse tu marques 2 points");
+            JOptionPane.showMessageDialog(null, "bravo bonne réponse tu marques 2 points et tu as mis : "+minutes+":"+seconds+":"+milliseconds+ " pour répondre");
+            temp1.add(minutes);
+            temp1.add(seconds);
+            temp1.add(milliseconds);
         }
         else{
             SelectionJoueur.tab[0].afficher(); 
+            JOptionPane.showMessageDialog(null, "dommage la bonne réponse était " + ini.bonReponse.get(te)+"et tu as mis :"+minutes+":"+seconds+":"+milliseconds+ " pour répondre");
+            temp1.add(minutes);
+            temp1.add(seconds);
+            temp1.add(milliseconds);
         }
+        
+        
         Joueur j2 = new Joueur();
         j2 = SelectionJoueur.tab[1];
         Joueurs1.setText(j2.toString());
@@ -411,15 +526,75 @@ public class Phase1Q extends javax.swing.JFrame {
             jRadioButton3.setText(ini.autreRepQcm.get((te*3)+1));
             jRadioButton1.setText(ini.autreRepQcm.get((te*3)+2));
         }
+        jLabel2.setVisible(false);
+        jLabel3.setVisible(false);
+        jLabel4.setVisible(false);
         
 
         jButton1.setVisible(false);
         jButton4.setVisible(false);
         jButton2.setVisible(true);
+        
+        milliseconds = 0;
+        seconds = 0;
+        minutes = 0;
+        
+        
+        state2 =true;
+        u = new Thread()
+        {
+            public void run(){
+            
+                
+                for(;;)
+                {
+                    if(state2 == true)
+                    {
+                        try{
+                            sleep(1);
+                            if(milliseconds>1000)
+                            {
+                                milliseconds = 0;
+                                seconds ++;
+
+                            }
+                            if (seconds > 60) {
+                                seconds = 0;
+                                minutes++;
+
+                                    }
+                            
+                                jLabel7.setText("" + milliseconds);
+                                milliseconds++;
+                                jLabel6.setText("" + seconds+" :");
+                                jLabel5.setText("" + minutes+" :");
+                                
+
+                        }
+                        catch (Exception e){
+                        
+                        }
+                    }
+                    else
+                    {
+                        
+                        break;
+                    }
+                                
+                }
+            
+            }
+        
+        
+        };
+        u.start();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        
+        
+       state2 = false;
        String choix = null;
        Enumeration elements = buttonGroup2.getElements();
        while(elements.hasMoreElements()){
@@ -434,12 +609,20 @@ public class Phase1Q extends javax.swing.JFrame {
         
             SelectionJoueur.tab[1].mAJScore(2);
             SelectionJoueur.tab[1].afficher(); 
-             JOptionPane.showMessageDialog(null, "bravo bonne réponse tu marques 2 points");
+            JOptionPane.showMessageDialog(null, "bravo bonne réponse tu marques 2 points et tu as mis : "+minutes+":"+seconds+":"+milliseconds+ " pour répondre");
+        
+            temp2.add(minutes);
+            temp2.add(seconds);
+            temp2.add(milliseconds);
+        
         }
         else{
             SelectionJoueur.tab[1].afficher(); 
-            JOptionPane.showMessageDialog(null, "dommage la bonne réponse était " + ini.bonReponse.get(te));
+            JOptionPane.showMessageDialog(null, "dommage la bonne réponse était " + ini.bonReponse.get(te)+"et tu as mis :"+minutes+":"+seconds+":"+milliseconds+ " pour répondre");
         
+            temp2.add(minutes);
+            temp2.add(seconds);
+            temp2.add(milliseconds);
         }
         
         
@@ -479,12 +662,76 @@ public class Phase1Q extends javax.swing.JFrame {
         jButton2.setVisible(false);
         jButton4.setVisible(false);
         jButton3.setVisible(true);
+       
+        jLabel5.setVisible(false);
+        jLabel6.setVisible(false);
+        jLabel7.setVisible(false);
+        jLabel8.setVisible(true);
+        jLabel9.setVisible(true);
+        jLabel10.setVisible(true);
+        jLabel11.setVisible(false);
+        jLabel12.setVisible(false);
+        jLabel13.setVisible(false);
+        
+        milliseconds = 0;
+        seconds = 0;
+        minutes = 0;
+        
+        state3 =true;
+        v = new Thread()
+        {
+            public void run(){
+            
+                
+                for(;;)
+                {
+                    if(state3 == true)
+                    {
+                        try{
+                            sleep(1);
+                            if(milliseconds>1000)
+                            {
+                                milliseconds = 0;
+                                seconds ++;
+
+                            }
+                            if (seconds > 60) {
+                                seconds = 0;
+                                minutes++;
+
+                                    }
+                            
+                                jLabel10.setText("" + milliseconds);
+                                milliseconds++;
+                                jLabel9.setText("" + seconds+" :");
+                                jLabel8.setText("" + minutes+" :");
+                                
+
+                        }
+                        catch (Exception e){
+                        
+                        }
+                    }
+                    else
+                    {
+                        
+                        break;
+                    }
+                                
+                }
+            
+            }
+        
+        
+        };
+        v.start();
 
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         
+       state3 = false; 
        String choix = null;
        Enumeration elements = buttonGroup2.getElements();
        while(elements.hasMoreElements()){
@@ -499,12 +746,19 @@ public class Phase1Q extends javax.swing.JFrame {
         
             SelectionJoueur.tab[2].mAJScore(2);
             SelectionJoueur.tab[2].afficher(); 
-             JOptionPane.showMessageDialog(null, "bravo bonne réponse tu marques 2 points");
+            JOptionPane.showMessageDialog(null, "bravo bonne réponse tu marques 2 points et tu as mis : "+minutes+":"+seconds+":"+milliseconds+ " pour répondre");
+        
+            temp3.add(minutes);
+            temp3.add(seconds);
+            temp3.add(milliseconds);
+        
         }
         else{
             SelectionJoueur.tab[2].afficher(); 
-            JOptionPane.showMessageDialog(null, "dommage la bonne réponse était " + ini.bonReponse.get(te));
-        
+            JOptionPane.showMessageDialog(null, "dommage la bonne réponse était " + ini.bonReponse.get(te)+"et tu as mis :"+minutes+":"+seconds+":"+milliseconds+ " pour répondre");
+            temp3.add(minutes);
+            temp3.add(seconds);
+            temp3.add(milliseconds);
         }
         
         
@@ -539,10 +793,74 @@ public class Phase1Q extends javax.swing.JFrame {
             jRadioButton1.setText(ini.autreRepQcm.get((te*3)+2));
         }
         jButton3.setVisible(false);
+        
+        jLabel8.setVisible(false);
+        jLabel9.setVisible(false);
+        jLabel10.setVisible(false);
+        jLabel11.setVisible(true);
+        jLabel12.setVisible(true);
+        jLabel13.setVisible(true);
+        
+        milliseconds = 0;
+        seconds = 0;
+        minutes = 0;
+        
+        state4 =true;
+        w = new Thread()
+        {
+            public void run(){
+            
+                
+                for(;;)
+                {
+                    if(state4 == true)
+                    {
+                        try{
+                            sleep(1);
+                            if(milliseconds>1000)
+                            {
+                                milliseconds = 0;
+                                seconds ++;
+
+                            }
+                            if (seconds > 60) {
+                                seconds = 0;
+                                minutes++;
+
+                                    }
+                            
+                                jLabel13.setText("" + milliseconds);
+                                milliseconds++;
+                                jLabel12.setText("" + seconds+" :");
+                                jLabel11.setText("" + minutes+" :");
+                                
+
+                        }
+                        catch (Exception e){
+                        
+                        }
+                    }
+                    else
+                    {
+                        
+                        break;
+                    }
+                                
+                }
+            
+            }
+        
+        
+        };
+        w.start();
+
+        
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        
+        state4 = false;
         String choix = null;
        Enumeration elements = buttonGroup2.getElements();
        while(elements.hasMoreElements()){
@@ -557,12 +875,21 @@ public class Phase1Q extends javax.swing.JFrame {
         
             SelectionJoueur.tab[3].mAJScore(2);
             SelectionJoueur.tab[3].afficher(); 
-             JOptionPane.showMessageDialog(null, "bravo bonne réponse tu marques 2 points");
+            JOptionPane.showMessageDialog(null, "bravo bonne réponse tu marques 2 points et tu as mis : "+minutes+":"+seconds+":"+milliseconds+ " pour répondre");
+        
+            temp4.add(minutes);
+            temp4.add(seconds);
+            temp4.add(milliseconds);
+        
         }
         else{
             SelectionJoueur.tab[3].afficher(); 
-            JOptionPane.showMessageDialog(null, "dommage la bonne réponse était " + ini.bonReponse.get(te));
+            JOptionPane.showMessageDialog(null, "dommage la bonne réponse était " + ini.bonReponse.get(te)+"et tu as mis :"+minutes+":"+seconds+":"+milliseconds+ " pour répondre");;
         
+            temp4.add(minutes);
+            temp4.add(seconds);
+            temp4.add(milliseconds);
+            
         }
         jButton4.setVisible(false);
         score.setVisible(true);
@@ -652,9 +979,18 @@ public class Phase1Q extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JRadioButton jRadioButton1;
