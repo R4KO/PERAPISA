@@ -77,7 +77,7 @@ public class Initial {
 
         //on déclare un numéro de question qui sera incrémenter
         int numq = 0;
-
+        aleaType = 1;//ici ajouter pour les tests
         //On déclare un thème et on initialise le themeCourant
         Themes thema = new Themes();
         thema.selectionnerTheme();
@@ -111,10 +111,17 @@ public class Initial {
             for (TypeVF e: b) {
                 if(e.getTheme().equals(thema.getThemeCourant())){
                     Question q = new Question(numq,e);
+                    enonceQuestion.add(e.getProposition()); // correspond à la question vf que l on veut
                     if(e.isReponse()){
                         bonReponse.add("vrai");
-                    }else{bonReponse.add("faux");}
+                        autreRepQcm.add("faux");
+                    }else{
+                        bonReponse.add("faux");
+                        autreRepQcm.add("vrai");
+                    
+                    }
                     //System.out.println(e.isReponse());
+                    
                     numq += 1;
                     questi.ajouter(q);
                 }

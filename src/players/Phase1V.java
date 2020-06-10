@@ -39,8 +39,27 @@ public class Phase1V extends javax.swing.JFrame {
                 selec = listq.selectionnerQuestion(1, te);
             }
             
+         question.setText(ini.enonceQuestion.get(te));
+         int ti = (int) (Math.random() * 100 % 2);
+        if (ti % 2 == 0) {
+            jRadioButton1.setText(ini.bonReponse.get(te));
+            jRadioButton2.setText(ini.autreRepQcm.get(te));
             
-            
+        }else if(ti % 2 == 1){
+            jRadioButton2.setText(ini.bonReponse.get(te));
+             jRadioButton1.setText(ini.autreRepQcm.get(te));
+           
+        } 
+        
+        Joueur j1 = new Joueur();
+        j1 = SelectionJoueur.tab[0];
+        
+        
+        Joueurs1.setText(j1.toString());
+        jButton2.setVisible(false);
+        score.setVisible(false);
+        jButton4.setVisible(false);
+        jButton3.setVisible(false);
     }
 
     /**
@@ -233,29 +252,171 @@ public class Phase1V extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+       String choix = null;
+       Enumeration elements = buttonGroup1.getElements();
+       while(elements.hasMoreElements()){
+           
+           AbstractButton button = (AbstractButton)elements.nextElement();
+           if(button.isSelected()){
+               choix = button.getText();  
+           }
+       }
+       JOptionPane.showMessageDialog(null, "a"+ini.bonReponse.get(te)+"a"+choix);
+        if(ini.bonReponse.get(te).equals(choix)){
+        
+            SelectionJoueur.tab[0].mAJScore(2);
+            SelectionJoueur.tab[0].afficher(); 
+             JOptionPane.showMessageDialog(null, "bravo bonne réponse tu marques 2 points");
+        }
+        else{
+            SelectionJoueur.tab[0].afficher(); 
+            JOptionPane.showMessageDialog(null, "dommage la bonne réponse était " + ini.bonReponse.get(te));
+        
+        }
+        Joueur j2 = new Joueur();
+        j2 = SelectionJoueur.tab[1];
+        Joueurs1.setText(j2.toString());
+        
+        question.setText(ini.enonceQuestion.get(te));
+        
+        int ti = (int) (Math.random() * 100 % 2);
+        if (ti % 2 == 0) {
+            jRadioButton1.setText(ini.bonReponse.get(te));
+            jRadioButton2.setText(ini.autreRepQcm.get(te));
+            
+        }else if(ti % 2 == 1){
+            jRadioButton2.setText(ini.bonReponse.get(te));
+             jRadioButton1.setText(ini.autreRepQcm.get(te));
+           
+        } 
+        
+        jButton1.setVisible(false);
+        jButton4.setVisible(false);
+        jButton2.setVisible(true);
 
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+       String choix = null;
+       Enumeration elements = buttonGroup1.getElements();
+       while(elements.hasMoreElements()){
+           
+           AbstractButton button = (AbstractButton)elements.nextElement();
+           if(button.isSelected()){
+               choix = button.getText();  
+           }
+       }
+       JOptionPane.showMessageDialog(null, "a"+ini.bonReponse.get(te)+"a"+choix);
+        if(ini.bonReponse.get(te).equals(choix)){
         
+            SelectionJoueur.tab[1].mAJScore(2);
+            SelectionJoueur.tab[1].afficher(); 
+             JOptionPane.showMessageDialog(null, "bravo bonne réponse tu marques 2 points");
+        }
+        else{
+            SelectionJoueur.tab[1].afficher(); 
+            JOptionPane.showMessageDialog(null, "dommage la bonne réponse était " + ini.bonReponse.get(te));
+        
+        }
+        Joueur j3 = new Joueur();
+        j3 = SelectionJoueur.tab[2];
+        Joueurs1.setText(j3.toString());
+        
+        question.setText(ini.enonceQuestion.get(te));
+        
+        int ti = (int) (Math.random() * 100 % 2);
+        if (ti % 2 == 0) {
+            jRadioButton1.setText(ini.bonReponse.get(te));
+            jRadioButton2.setText(ini.autreRepQcm.get(te));
+            
+        }else if(ti % 2 == 1){
+            jRadioButton2.setText(ini.bonReponse.get(te));
+             jRadioButton1.setText(ini.autreRepQcm.get(te));
+           
+        } 
+        
+        jButton2.setVisible(false);
+        jButton4.setVisible(false);
+        jButton3.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+       String choix = null;
+       Enumeration elements = buttonGroup1.getElements();
+       while(elements.hasMoreElements()){
+           
+           AbstractButton button = (AbstractButton)elements.nextElement();
+           if(button.isSelected()){
+               choix = button.getText();  
+           }
+       }
+       JOptionPane.showMessageDialog(null, "a"+ini.bonReponse.get(te)+"a"+choix);
+        if(ini.bonReponse.get(te).equals(choix)){
+        
+            SelectionJoueur.tab[2].mAJScore(2);
+            SelectionJoueur.tab[2].afficher(); 
+             JOptionPane.showMessageDialog(null, "bravo bonne réponse tu marques 2 points");
+        }
+        else{
+            SelectionJoueur.tab[2].afficher(); 
+            JOptionPane.showMessageDialog(null, "dommage la bonne réponse était " + ini.bonReponse.get(te));
+        
+        }
+        Joueur j4 = new Joueur();
+        j4 = SelectionJoueur.tab[3];
+        Joueurs1.setText(j4.toString());
+        jButton3.setVisible(false);
+        jButton4.setVisible(true);
+        question.setText(ini.enonceQuestion.get(te));
+        jButton3.setVisible(false);
+        int ti = (int) (Math.random() * 100 % 2);
+        if (ti % 2 == 0) {
+            jRadioButton1.setText(ini.bonReponse.get(te));
+            jRadioButton2.setText(ini.autreRepQcm.get(te));
+            
+        }else if(ti % 2 == 1){
+            jRadioButton2.setText(ini.bonReponse.get(te));
+             jRadioButton1.setText(ini.autreRepQcm.get(te));
+           
+        } 
 
        
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        String choix = null;
+       Enumeration elements = buttonGroup1.getElements();
+       while(elements.hasMoreElements()){
+           
+           AbstractButton button = (AbstractButton)elements.nextElement();
+           if(button.isSelected()){
+               choix = button.getText();  
+           }
+       }
+       JOptionPane.showMessageDialog(null, "a"+ini.bonReponse.get(te)+"a"+choix);
+        if(ini.bonReponse.get(te).equals(choix)){
         
+            SelectionJoueur.tab[3].mAJScore(2);
+            SelectionJoueur.tab[3].afficher(); 
+             JOptionPane.showMessageDialog(null, "bravo bonne réponse tu marques 2 points");
+        }
+        else{
+            SelectionJoueur.tab[3].afficher(); 
+            JOptionPane.showMessageDialog(null, "dommage la bonne réponse était " + ini.bonReponse.get(te));
+        
+        }
+        jButton4.setVisible(false);
+        score.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void scoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_scoreActionPerformed
         // TODO add your handling code here:
-        
+        new AfficherScoreTour1().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_scoreActionPerformed
 
     /**
