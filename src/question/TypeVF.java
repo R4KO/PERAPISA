@@ -33,4 +33,20 @@ public class TypeVF extends TypeQuestion {
         return reponse;
     }
 
+    public int getNiveau() {
+        return niveau;
+    }
+
+    public void setNiveau(int niveau) {
+        this.niveau = niveau;
+    }
+
+    public String getProposition() {
+        return proposition;
+    }
+
+    public void setProposition(String proposition) {
+        this.proposition = proposition;
+    }
+    
 }

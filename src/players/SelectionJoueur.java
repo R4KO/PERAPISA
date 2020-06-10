@@ -168,7 +168,7 @@ public class SelectionJoueur extends javax.swing.JFrame {
         try {
             // TODO add your handling code here:
             Initial ini = new Initial();
-            int type =0; //ini.rand();
+            int type = 1; //ini.rand();
             JOptionPane.showMessageDialog(null, "type = "+type );
 
             if (type == 0){

@@ -30,7 +30,7 @@ public class Initial {
         public static ArrayList<String> enonceQuestion = new ArrayList<>();
         public static ArrayList<String> bonReponse = new ArrayList<>();
         public static ArrayList<String> autreRepQcm = new ArrayList<>();
-    
+        
     
     public Initial() throws FileNotFoundException {
         
