@@ -1,12 +1,14 @@
-import players.EnsJoueurs;
-import players.Joueur;
-import question.Themes;
-import question.TypeQCM;
-import question.Question;
-import question.ListeQuestions;
-import question.TypeRC;
-import question.TypeVF;
-import question.*;
+package src.players;
+
+import src.players.EnsJoueurs;
+import src.players.Joueur;
+import src.question.Themes;
+import src.question.TypeQCM;
+import src.question.Question;
+import src.question.ListeQuestions;
+import src.question.TypeRC;
+import src.question.TypeVF;
+
 
 import java.io.*;
 import java.util.ArrayList;
@@ -15,7 +17,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
 
-        String path = "assets/";
+        String path = "build/classes/assets/";
 
         Scanner sce = new Scanner (System.in);
 

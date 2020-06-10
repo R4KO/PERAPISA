@@ -3,7 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package players;
+package src.players;
+
+import java.io.FileNotFoundException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -160,9 +165,31 @@ public class SelectionJoueur extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        
-        new Phase1j1().setVisible(true);
+        try {
+            // TODO add your handling code here:
+            Initial ini = new Initial();
+            int type =0; //ini.rand();
+            JOptionPane.showMessageDialog(null, "type = "+type );
+
+            if (type == 0){
+            
+                new Phase1Q().setVisible(true);
+
+            }
+            else if (type == 1){
+                
+                new Phase1V().setVisible(true);
+            
+            }
+            else{
+
+                new Phase1R().setVisible(true);
+            
+            }
+            
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(SelectionJoueur.class.getName()).log(Level.SEVERE, null, ex);
+        }
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 

@@ -1,4 +1,4 @@
-package players;
+package src.players;
 
 public interface Phase {
     //int phaseDeJeu = 1;

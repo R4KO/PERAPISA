@@ -1,4 +1,4 @@
-package question;
+package src.question;
 
 
 import java.util.Scanner;
@@ -83,4 +83,20 @@ public class TypeQCM extends TypeQuestion{
     public String getRepBonQCM() {
         return repBonQCM;
     }
+    public String getRep1QCM() {
+        return rep1QCM;
+    }
+
+    public String getRep2QCM() {
+        return rep2QCM;
+    }
+
+    public String getRep3QCM() {
+        return rep3QCM;
+    }
+
+    public String getTexteQCM() {
+        return texteQCM;
+    }
+    
 }

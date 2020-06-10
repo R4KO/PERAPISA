@@ -1,4 +1,4 @@
-package question;
+package src.question;
 
 abstract public class TypeQuestion {
     protected String theme;

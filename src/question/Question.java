@@ -1,6 +1,6 @@
-package question;
+package src.question;
 
-import question.TypeQCM;
+
 import java.util.Scanner;
 
 public class Question <T extends TypeQuestion>{

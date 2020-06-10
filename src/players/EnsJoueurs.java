@@ -1,4 +1,4 @@
-package players;
+package src.players;
 
 import question.*;
 
@@ -65,7 +65,6 @@ public class EnsJoueurs implements Phase {
 
 
 
-    @Override
     public Joueur[] selectionnerJoueurs() {
         return new Joueur[]{selectionnerJoueur(), selectionnerJoueur(), selectionnerJoueur(), selectionnerJoueur()};
     }
