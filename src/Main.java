@@ -80,6 +80,7 @@ public class Main {
             System.out.println("--------------------- Type QCM ---------------------");
             for (TypeQCM e : a) {
                 if(e.getTheme().equals(thema.getThemeCourant())){
+                    // rajout des questions au bon thème
                     Question q = new Question(numq,e);
                     bonReponse.add(e.getRepBonQCM());
                     numq += 1;
@@ -158,21 +159,25 @@ public class Main {
 
         for(int j = 0; j < 20; j++){
             if(e.getelement(j).getEtat().equals("sélectionné")){
-                jeuPhase1(questi,bonReponse,e.getelement(j),aleaType);
+                jeuPhase1(questi,bonReponse,e.getelement(j),aleaType); /// TODO: changer le prototype de la fonction en implémentant la fonction Saisir
                 e.getelement(j).afficher();
                 System.out.println("\n\n");
             }
         }
 
+
+        /// TODO: trier le tableau de joueur pour vérifier qui est dernier
         int nbMin = 20;
         Joueur jElim = null;
+
+        /// TODO: utiliser le tableau de joueur sélectionné au lieu d'itérer
         for(int j = 0; j < 20; j++){
             if(e.getelement(j).getEtat().equals("sélectionné")){
                 if(e.getelement(j).getScore() < nbMin){
                     jElim = e.getelement(j);
                     nbMin = e.getelement(j).getScore();
                 }else if(e.getelement(j).getScore() == nbMin){
-                    //TODO: faire le temps pour vérifier la deuxième condition
+                    //TODO: faire le timer pour vérifier la deuxième condition
                 }
             }
         }
@@ -266,6 +271,7 @@ public class Main {
 //}
 
     public static void jeuPhase1(ListeQuestions questi,ArrayList<String> bonReponse, Joueur j, int type){
+        /// TODO: Simplifier tout ça
         System.out.println("Joueur " + j.getNom() + " c'est à vous de jouer");
         Scanner sc = new Scanner(System.in);
         String reponse = "null";

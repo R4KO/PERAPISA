@@ -53,6 +53,7 @@ public class Themes {
     }
 
     public void enleverTheme(String thema){
+        /// TODO: enlever l'itération
         for(int i = 0; i < themes.size(); i++){
             if(themes.get(i).equals(thema)){
                 themes.remove(i);
