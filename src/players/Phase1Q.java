@@ -6,6 +6,7 @@
 package src.players;
 
 import java.io.FileNotFoundException;
+import static java.lang.Thread.sleep;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.Scanner;
@@ -28,6 +29,11 @@ public class Phase1Q extends javax.swing.JFrame {
 
     public static Initial ini;
     public static int te;
+    public static boolean state;
+    public static int seconds;
+    public static int minutes;
+    public static int milliseconds;
+    public static Thread t;
     
     /**
      * Creates new form Phase1Q
@@ -79,6 +85,55 @@ public class Phase1Q extends javax.swing.JFrame {
         score.setVisible(false);
         jButton4.setVisible(false);
         jButton3.setVisible(false);
+        
+        state = true;
+        t = new Thread()
+        {
+            public void run(){
+            
+                
+                for(;;)
+                {
+                    if(state == true)
+                    {
+                        try{
+                            sleep(1);
+                            if(milliseconds>1000)
+                            {
+                                milliseconds = 0;
+                                seconds ++;
+
+                            }
+                            if (seconds > 60) {
+                                seconds = 0;
+                                minutes++;
+
+                                    }
+                            
+                                jLabel4.setText("" + milliseconds);
+                                milliseconds++;
+                                jLabel3.setText("" + seconds+" :");
+                                jLabel2.setText("" + minutes+" :");
+                                
+
+                        }
+                        catch (Exception e){
+                        
+                        }
+                    }
+                    else
+                    {
+                        
+                        break;
+                    }
+                                
+                }
+            
+            }
+        
+        
+        };
+        t.start();
     }
 
     /**
@@ -107,6 +162,9 @@ public class Phase1Q extends javax.swing.JFrame {
         jRadioButton4 = new javax.swing.JRadioButton();
         jButton4 = new javax.swing.JButton();
         score = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -193,6 +251,12 @@ public class Phase1Q extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setText("00 :");
+
+        jLabel3.setText("00 :");
+
+        jLabel4.setText("00 ");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -212,7 +276,13 @@ public class Phase1Q extends javax.swing.JFrame {
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(16, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(101, 101, 101)
+                .addComponent(jLabel2)
+                .addGap(39, 39, 39)
+                .addComponent(jLabel3)
+                .addGap(34, 34, 34)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(score, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -249,8 +319,16 @@ public class Phase1Q extends javax.swing.JFrame {
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(48, 48, 48)
-                .addComponent(score, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addComponent(score, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(75, 75, 75)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4))))
                 .addContainerGap(210, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
@@ -295,7 +373,7 @@ public class Phase1Q extends javax.swing.JFrame {
                choix = button.getText();  
            }
        }
-       JOptionPane.showMessageDialog(null, "a"+ini.bonReponse.get(te)+"a"+choix);
+       
         if(ini.bonReponse.get(te).equals(choix)){
         
             SelectionJoueur.tab[0].mAJScore(2);
@@ -304,8 +382,6 @@ public class Phase1Q extends javax.swing.JFrame {
         }
         else{
             SelectionJoueur.tab[0].afficher(); 
-            JOptionPane.showMessageDialog(null, "dommage la bonne réponse était " + ini.bonReponse.get(te));
-        
         }
         Joueur j2 = new Joueur();
         j2 = SelectionJoueur.tab[1];
@@ -340,15 +416,6 @@ public class Phase1Q extends javax.swing.JFrame {
         jButton1.setVisible(false);
         jButton4.setVisible(false);
         jButton2.setVisible(true);
-        
-        
-        
-        
-        
-        
-        
-        
-
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -585,6 +652,9 @@ public class Phase1Q extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JRadioButton jRadioButton1;

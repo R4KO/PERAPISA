@@ -77,7 +77,7 @@ public class Initial {
 
         //on déclare un numéro de question qui sera incrémenter
         int numq = 0;
-        aleaType = 1;//ici ajouter pour les tests
+        aleaType = 0;//ici ajouter pour les tests
         //On déclare un thème et on initialise le themeCourant
         Themes thema = new Themes();
         thema.selectionnerTheme();
