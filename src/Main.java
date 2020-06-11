@@ -90,11 +90,31 @@ public class Main {
          */
         //Class<?> typeSelected = typesQuestion[new Random().nextInt(typesQuestion.length)].get(0).getClass();
 
+        // Choisir un thème
+        Themes themes = new Themes();
+        themes.initialisationTheme();
 
-        jeu(e, joueurs);
+        // Phase 1
+        jeu(e, joueurs, themes);
+
+        System.out.println("Le joueur " + joueurs[3].getNom() + " est le dernier.\nIl est donc éliminé");
+        System.out.println("Le joueur " + joueurs[0].getNom() + " est le premier.\nIl gagne donc le statut de gagnant");
+        // On donne le statut de gagnant
+        joueurs[0].changerEtat("gagnant");
+
+        // On retire le dernier élément
+        joueurs = Arrays.copyOf(joueurs, joueurs.length-1);
+
+        // Affichage des joueurs
+        for (Joueur j : joueurs) {
+            j.afficher();
+        }
+
+        // Phase 2
+        jeu(e, joueurs, themes);
     }
 
-    public static void jeu(EnsJoueurs e, Joueur[] j) {
+    public static void jeu(EnsJoueurs e, Joueur[] j, Themes themes) {
         //tableau de tous les types de questions
         String[] types = {a.get(0).getClass().getSimpleName(), b.get(0).getClass().getSimpleName(), c.get(0).getClass().getSimpleName()};
         // tableau contenant les ArrayLists de question
@@ -103,13 +123,9 @@ public class Main {
         ArrayList<TypeQuestion> selected = typesQuestion[new Random().nextInt(typesQuestion.length)];
         String typeSelected = selected.get(0).getClass().getSimpleName();
 
-        // Choisir un thème
-        Themes themes = new Themes();
 
         ListeQuestions questions = new ListeQuestions();
 
-        themes.initialisationTheme();
-        themes.selectionnerTheme();
 
         System.out.println("Type sélectionné : " + typeSelected);
         System.out.println("Thème courant : " + themes.getThemeCourant());
@@ -121,18 +137,26 @@ public class Main {
         switch (e.phaseDeJeu()) {
             case 1:
                 for (Joueur joueur : j) {
+                    // changer de thème
+                    themes.selectionnerTheme();
                     ajouterQuestions(selected, themes, e, questions);
                     System.out.println("Nombre de questions: " + questions.nombreDeQuestions());
                     poserQuestion(e.phaseDeJeu(), questions.selectionnerQuestion(), joueur);
-                    // changer de thème
-                    themes.selectionnerTheme();
                 }
 
                 // Trier le tableau de joueur
                 Arrays.sort(j);
+
+                // Afficher les joueurs
                 for (Joueur joueur : j) {
                     joueur.afficher();
                 }
+
+                // Phase suivante
+                e.phaseSuivante();
+                break;
+            case 2:
+                
                 break;
         }
 
@@ -169,5 +193,7 @@ public class Main {
         }else {
             System.out.println("Mauvaise réponse");
         }
+        System.out.println();
+        System.out.println();
     }
 }
