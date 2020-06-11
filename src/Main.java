@@ -101,6 +101,7 @@ public class Main {
         System.out.println("Le joueur " + joueurs[0].getNom() + " est le premier.\nIl gagne donc le statut de gagnant");
         // On donne le statut de gagnant
         joueurs[0].changerEtat("gagnant");
+        joueurs[3].changerEtat("éliminé");
 
         // On retire le dernier élément
         joueurs = Arrays.copyOf(joueurs, joueurs.length-1);
@@ -112,6 +113,20 @@ public class Main {
 
         // Phase 2
         jeu(e, joueurs, themes);
+
+        System.out.println("Le joueur " + joueurs[2].getNom() + " est le dernier.\nIl est donc éliminé");
+        System.out.println("Le joueur " + joueurs[0].getNom() + " est le premier.\nIl gagne donc le statut de gagnant");
+        // On donne le statut de gagnant
+        joueurs[0].changerEtat("gagnant");
+        joueurs[2].changerEtat("éliminé");
+
+        // On retire le dernier élément
+        joueurs = Arrays.copyOf(joueurs, joueurs.length-1);
+
+        // Affichage des joueurs
+        for (Joueur j : joueurs) {
+            j.afficher();
+        }
     }
 
     public static void jeu(EnsJoueurs e, Joueur[] j, Themes themes) {
@@ -137,6 +152,7 @@ public class Main {
         switch (e.phaseDeJeu()) {
             case 1:
                 for (Joueur joueur : j) {
+                    System.out.println("Au tour du joueur " + joueur.getNom());
                     // changer de thème
                     themes.selectionnerTheme();
                     ajouterQuestions(selected, themes, e, questions);
@@ -156,7 +172,37 @@ public class Main {
                 e.phaseSuivante();
                 break;
             case 2:
-                
+                Scanner sc = new Scanner(System.in);
+                // 2 tours de boucle
+                for (int i = 0; i < 2; i++) {
+                    for (Joueur joueur : j) {
+                        System.out.println("Au tour du joueur " + joueur.getNom());
+                        System.out.println("Thèmes disponibles: ");
+                        themes.afficher();
+                        System.out.print("Choissisez un thème: ");
+                        String ans = sc.next();
+                        while (!themes.contient(ans)) {
+                            System.out.print("Veuillez entrer un thème valide: ");
+                            ans = sc.next();
+                        }
+                        // changer de thème
+                        themes.modifierTheme(ans);
+                        ajouterQuestions(selected, themes, e, questions);
+                        System.out.println("Nombre de questions: " + questions.nombreDeQuestions());
+                        poserQuestion(e.phaseDeJeu(), questions.selectionnerQuestion(), joueur);
+                    }
+                }
+
+                // Trier le tableau de joueur
+                Arrays.sort(j);
+
+                // Afficher les joueurs
+                for (Joueur joueur : j) {
+                    joueur.afficher();
+                }
+
+                // Phase suivante
+                e.phaseSuivante();
                 break;
         }
 
@@ -180,7 +226,6 @@ public class Main {
     public static void poserQuestion(int phase, Question q, Joueur j) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Au tour du joueur " + j.getNom());
         q.afficher();
 
         System.out.print("Réponse: ");

@@ -20,10 +20,8 @@ public class Themes {
 
 
     public void modifierTheme(String designation) {
-        /// TODO: trouver un sens à cette méthode
-        // i: numéro du thème dans le tableau
-        //
         themeCourant = designation;
+        themesPasses.add(designation);
     }
 
     public String selectionnerTheme() {
@@ -35,14 +33,18 @@ public class Themes {
         else {
             nouveauTheme = themes[(Arrays.asList(themes).indexOf(themeCourant) + 1) % themes.length];
             if (themesPasses.contains(nouveauTheme)) {
-                modifierTheme(nouveauTheme);
+                //modifierTheme(nouveauTheme);
                 selectionnerTheme();
             }
         }
-        modifierTheme(nouveauTheme);
-        themesPasses.add(nouveauTheme);
+        modifierTheme(nouveauTheme);;
 
         return nouveauTheme;
+    }
+
+    public boolean contient(String theme) {
+        // vérifier que le thème entré existe bien et qu'il n'est pas déjà passé
+        return Arrays.asList(themes).contains(theme) && !themesPasses.contains(theme);
     }
 
     public void afficher() {
@@ -56,7 +58,9 @@ public class Themes {
     public String toString() {
         String output = "";
         for (String s : themes) {
-            output += s + "\n";
+            if (!themesPasses.contains(s)) {
+                output += s + "\n";
+            }
         }
         return output;
     }
