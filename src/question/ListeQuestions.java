@@ -1,6 +1,7 @@
 package question;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class ListeQuestions {
     private ArrayList<Question> list;
@@ -24,7 +25,12 @@ public class ListeQuestions {
     }
 
     public Question selectionnerQuestion() {
-        /// TODO: séletionner la question
-        return null;
+        Question q = list.get(new Random().nextInt(list.size()));
+        list.remove(q);
+        return q;
+    }
+
+    public int nombreDeQuestions() {
+        return list.size();
     }
 }

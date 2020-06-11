@@ -1,5 +1,6 @@
 package players;
 
+import java.util.Random;
 import java.util.Vector;
 
 public class EnsJoueurs implements Phase {
@@ -14,7 +15,7 @@ public class EnsJoueurs implements Phase {
 
     public Joueur selectionnerJoueur() {
         // nombre aléatoire
-        Joueur j =  joueurs.elementAt((int) (Math.random() * 100) % joueurs.size());
+        Joueur j =  joueurs.elementAt(new Random().nextInt(joueurs.size()));
 
         if (j.getEtat().equals("sélectionné")) {
             selectionnerJoueur();

@@ -51,7 +51,7 @@ public class TypeQCM extends TypeQuestion{
     @Override
     public boolean verifierReponse(String reponse) {
         // Fonction qui vérifie si la réponse est la bonne
-        return reponse.equals(repBonQCM);
+        return reponse.toUpperCase().equals(repBonQCM.toUpperCase());
     }
 
     @Override

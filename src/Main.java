@@ -8,14 +8,14 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
+    /// TODO: LinkedLists
+    static ArrayList<TypeQCM> a = new ArrayList<>(); // QCM
+    static ArrayList<TypeVF> b = new ArrayList<>(); // Vrai/Faux
+    static ArrayList<TypeRC> c = new ArrayList<>(); // Répnses courtes
+
     public static void main(String[] args) throws FileNotFoundException {
 
         String path = "assets/";
-
-        /// TODO: LinkedLists
-        ArrayList<TypeQCM> a = new ArrayList<>(); // QCM
-        ArrayList<TypeVF> b = new ArrayList<>(); // Vrai/Faux
-        ArrayList<TypeRC> c = new ArrayList<>(); // Répnses courtes
 
 
         // Initialisation des questions
@@ -49,14 +49,6 @@ public class Main {
         }
 
 
-        //tableau de tous les types de questions
-        String[] types = {a.get(0).getClass().getSimpleName(), b.get(0).getClass().getSimpleName(), c.get(0).getClass().getSimpleName()};
-        // tableau contenant les ArrayLists de question
-        ArrayList[] typesQuestion = {a, b, c};
-        // Types de questions qui seront posées
-        ArrayList<TypeQuestion> selected = typesQuestion[new Random().nextInt(typesQuestion.length)];
-        String typeSelected = selected.get(0).getClass().getSimpleName();
-
         /*
         System.out.println("--------------------- Affichage des QCM---------------------");
         for (TypeQCM e: a) {
@@ -89,6 +81,27 @@ public class Main {
             j.afficher();
         }
 
+        // Choisir aléatoirement un type de question
+
+        /*
+        // reflection
+        TypeQuestion typeSelected = (TypeQuestion) ((ParameterizedType)typesQuestion[new Random().nextInt(typesQuestion.length)].get(0).getClass().getGenericSuperclass()).getActualTypeArguments()[0];
+         */
+        //Class<?> typeSelected = typesQuestion[new Random().nextInt(typesQuestion.length)].get(0).getClass();
+
+
+        jeu(e, joueurs);
+    }
+
+    public static void jeu(EnsJoueurs e, Joueur[] j) {
+        //tableau de tous les types de questions
+        String[] types = {a.get(0).getClass().getSimpleName(), b.get(0).getClass().getSimpleName(), c.get(0).getClass().getSimpleName()};
+        // tableau contenant les ArrayLists de question
+        ArrayList[] typesQuestion = {a, b, c};
+        // Types de questions qui seront posées
+        ArrayList<TypeQuestion> selected = typesQuestion[new Random().nextInt(typesQuestion.length)];
+        String typeSelected = selected.get(0).getClass().getSimpleName();
+
         // Choisir un thème
         Themes themes = new Themes();
 
@@ -109,6 +122,32 @@ public class Main {
             }
         }
 
-        questions.afficher();
+        System.out.println("Nombre de questions: " + questions.nombreDeQuestions());
+        //questions.afficher();
+        switch (e.phaseDeJeu()) {
+            case 1:
+                for (Joueur joueur : j) {
+                    poserQuestion(e.phaseDeJeu(), questions.selectionnerQuestion(), joueur);
+                }
+                break;
+        }
+    }
+
+    public static void poserQuestion(int phase, Question q, Joueur j) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Au tour du joueur " + j.getNom());
+        q.afficher();
+
+        System.out.print("Réponse: ");
+
+        String reponse = sc.nextLine();
+
+        if (q.saisir(reponse)) {
+            System.out.println("Bonne réponse");
+            j.mAJScore(phase);
+        }else {
+            System.out.println("Mauvaise réponse");
+        }
     }
 }

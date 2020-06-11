@@ -1,47 +1,47 @@
 package question;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 
 public class Themes {
-    private ArrayList<String> themes;
+    private String[] themes;
     private String themeCourant;
+    private ArrayList<String> themesPasses;
 
     public Themes() {
-        themes = new ArrayList<>();
+        themesPasses = new ArrayList<>();
+        themeCourant = "";
     }
 
     public void initialisationTheme(){
-        this.themes.add("Animaux");
-        this.themes.add("Astronomie");
-        this.themes.add("Capitale");
-        this.themes.add("Football");
-        this.themes.add("Mathématiques");
-        this.themes.add("Musique");
-        this.themes.add("Sciences");
-        this.themes.add("Sport");
-        this.themes.add("Jeux Vidéo");
-        this.themes.add("Informatique");
+        themes = new String[]{"animaux", "astronomie", "capitale", "football", "mathématiques", "musique", "sciences", "sport", "jeuxvidéo", "informatique"};
     }
 
-    public Themes(String themeCourant) {
-        themes = new ArrayList<>();
-        this.themeCourant = themeCourant;
-    }
 
     public void modifierTheme(String designation) {
         /// TODO: trouver un sens à cette méthode
-        // i: numério du thème dans le tableau
+        // i: numéro du thème dans le tableau
         //
         themeCourant = designation;
     }
 
     public String selectionnerTheme() {
-        String nouveauTheme = themes.get(new Random().nextInt(themes.size()));
+        String nouveauTheme = "";
+        if (themeCourant.equals("")) {
+            int indice = new Random().nextInt(themes.length);
+            nouveauTheme = themes[indice];
+        }
+        else {
+            nouveauTheme = themes[Arrays.asList(themes).indexOf(themeCourant) + 1];
+            if (themesPasses.contains(nouveauTheme)) {
+                modifierTheme(nouveauTheme);
+                selectionnerTheme();
+            }
+        }
         modifierTheme(nouveauTheme);
+        themesPasses.add(nouveauTheme);
 
-        // retirer le thème de la liste de thèmes
-        themes.remove(nouveauTheme);
         return nouveauTheme;
     }
 

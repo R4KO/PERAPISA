@@ -16,7 +16,7 @@ public class TypeRC extends TypeQuestion {
 
     @Override
     public boolean verifierReponse(String reponse) {
-        return reponse.equals(this.reponse);
+        return reponse.toUpperCase().equals(this.reponse.toUpperCase());
     }
 
     @Override

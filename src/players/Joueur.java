@@ -19,7 +19,7 @@ public class Joueur {
 
     public void mAJScore(int phase) {
         // On récupère directement le numéro de la phase en paramètre et on incrémente le bon nombre grâce au tableau statique de la class EnsJoueurs
-        score += EnsJoueurs.scores[phase];
+        score += EnsJoueurs.scores[phase - 1];
     }
 
     public void changerEtat(String etat) {
@@ -42,5 +42,9 @@ public class Joueur {
 
     public String getEtat() {
         return etat;
+    }
+
+    public String getNom() {
+        return nom;
     }
 }

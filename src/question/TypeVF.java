@@ -22,7 +22,12 @@ public class TypeVF extends TypeQuestion {
 
     @Override
     public boolean verifierReponse(String reponse) {
-        return reponse.equals(this.reponse);
+        if (reponse.toUpperCase().equals("VRAI")) {
+            return this.reponse;
+        }
+        else {
+            return !this.reponse;
+        }
     }
 
     @Override
