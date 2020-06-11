@@ -54,6 +54,11 @@ public class Themes {
     public String getThemeCourant() {
         return themeCourant;
     }
+
+    public void viderThemes() {
+        themesPasses.clear();
+    }
+
     @Override
     public String toString() {
         String output = "";

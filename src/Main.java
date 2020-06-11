@@ -82,19 +82,12 @@ public class Main {
             j.afficher();
         }
 
-        // Choisir aléatoirement un type de question
-
-        /*
-        // reflection
-        TypeQuestion typeSelected = (TypeQuestion) ((ParameterizedType)typesQuestion[new Random().nextInt(typesQuestion.length)].get(0).getClass().getGenericSuperclass()).getActualTypeArguments()[0];
-         */
-        //Class<?> typeSelected = typesQuestion[new Random().nextInt(typesQuestion.length)].get(0).getClass();
-
         // Choisir un thème
         Themes themes = new Themes();
         themes.initialisationTheme();
 
         // Phase 1
+        System.out.println("\n---------------------Phase 1---------------------\n");
         jeu(e, joueurs, themes);
 
         System.out.println("Le joueur " + joueurs[3].getNom() + " est le dernier.\nIl est donc éliminé");
@@ -112,10 +105,11 @@ public class Main {
         }
 
         // Phase 2
+        System.out.println("\n---------------------Phase 2---------------------\n");
         jeu(e, joueurs, themes);
 
-        System.out.println("Le joueur " + joueurs[2].getNom() + " est le dernier.\nIl est donc éliminé");
-        System.out.println("Le joueur " + joueurs[0].getNom() + " est le premier.\nIl gagne donc le statut de gagnant");
+        System.out.println("\nLe joueur " + joueurs[2].getNom() + " est le dernier.\nIl est donc éliminé");
+        System.out.println("\nLe joueur " + joueurs[0].getNom() + " est le premier.\nIl gagne donc le statut de gagnant");
         // On donne le statut de gagnant
         joueurs[0].changerEtat("gagnant");
         joueurs[2].changerEtat("éliminé");
@@ -127,6 +121,22 @@ public class Main {
         for (Joueur j : joueurs) {
             j.afficher();
         }
+
+        // Phase 3
+        System.out.println("\n---------------------Phase 3---------------------\n");
+        jeu(e, joueurs, themes);
+
+        System.out.println("\n---------------------FIN DU JEU---------------------\n");
+        System.out.println("Le joueur " + joueurs[1].getNom() + " est le perdant");
+        System.out.println("FÉLICITATIONS À " + joueurs[0].getNom() + " QUI GAGNE LE JEU");
+
+        // donner les status
+        joueurs[0].changerEtat("super-gagnant");
+        joueurs[1].changerEtat("éliminé");
+
+        System.out.println("\n---------------------Liste de tous les joueurs---------------------\n");
+        // Affichage de l'ensemble des joueurs
+        e.afficher();
     }
 
     public static void jeu(EnsJoueurs e, Joueur[] j, Themes themes) {
@@ -142,8 +152,9 @@ public class Main {
         ListeQuestions questions = new ListeQuestions();
 
 
-        System.out.println("Type sélectionné : " + typeSelected);
-        System.out.println("Thème courant : " + themes.getThemeCourant());
+        System.out.println("Type sélectionné : " + typeSelected + "\n");
+        System.out.println("------------------------------------------");
+        //System.out.println("Thème courant : " + themes.getThemeCourant());
 
         //ajouterQuestions(selected, themes, e, questions);
 
@@ -152,11 +163,11 @@ public class Main {
         switch (e.phaseDeJeu()) {
             case 1:
                 for (Joueur joueur : j) {
-                    System.out.println("Au tour du joueur " + joueur.getNom());
+                    System.out.println("\n\nnAu tour du joueur " + joueur.getNom() + "\n\n");
                     // changer de thème
                     themes.selectionnerTheme();
                     ajouterQuestions(selected, themes, e, questions);
-                    System.out.println("Nombre de questions: " + questions.nombreDeQuestions());
+                    //System.out.println("Nombre de questions: " + questions.nombreDeQuestions());
                     poserQuestion(e.phaseDeJeu(), questions.selectionnerQuestion(), joueur);
                 }
 
@@ -176,19 +187,56 @@ public class Main {
                 // 2 tours de boucle
                 for (int i = 0; i < 2; i++) {
                     for (Joueur joueur : j) {
-                        System.out.println("Au tour du joueur " + joueur.getNom());
+                        System.out.println("\n\nnAu tour du joueur " + joueur.getNom() + "\n\n");
                         System.out.println("Thèmes disponibles: ");
+
+                        // Afficher les thèmes disponibles
                         themes.afficher();
+
                         System.out.print("Choissisez un thème: ");
+
                         String ans = sc.next();
+                        // Si le thème entré n'est pas valide
                         while (!themes.contient(ans)) {
                             System.out.print("Veuillez entrer un thème valide: ");
                             ans = sc.next();
                         }
+
                         // changer de thème
                         themes.modifierTheme(ans);
                         ajouterQuestions(selected, themes, e, questions);
-                        System.out.println("Nombre de questions: " + questions.nombreDeQuestions());
+                        //System.out.println("Nombre de questions: " + questions.nombreDeQuestions());
+                        poserQuestion(e.phaseDeJeu(), questions.selectionnerQuestion(), joueur);
+                    }
+
+                    Arrays.sort(j);
+                }
+
+                // Trier le tableau de joueur
+                Arrays.sort(j);
+
+                // Afficher les joueurs
+                for (Joueur joueur : j) {
+                    joueur.afficher();
+                }
+
+                // Phase suivante
+                e.phaseSuivante();
+                break;
+            case 3:
+                // On récupère tous les thèmes
+                themes.initialisationTheme();
+                // On vide le tableau des thèmes déjà passés
+                themes.viderThemes();
+
+                // 3 tours de boucles
+                for (int i = 0; i < 2; i++) {
+                    for (Joueur joueur : j) {
+                        System.out.println("\n\nnAu tour du joueur " + joueur.getNom() + "\n\n");
+                        // changer de thème
+                        themes.selectionnerTheme();
+                        ajouterQuestions(selected, themes, e, questions);
+                        //System.out.println("Nombre de questions: " + questions.nombreDeQuestions());
                         poserQuestion(e.phaseDeJeu(), questions.selectionnerQuestion(), joueur);
                     }
                 }
@@ -208,7 +256,7 @@ public class Main {
 
     }
 
-    //fonction pour ajouter les fonctions dans la liste de questions par rapport au thème et à la phase
+    // Fonction pour ajouter les fonctions dans la liste de questions par rapport au thème et à la phase
     public static void ajouterQuestions(ArrayList<TypeQuestion> selected, Themes themes, EnsJoueurs e, ListeQuestions questions) {
         // Vider la liste de questions
         questions.viderQuestions();
@@ -216,6 +264,7 @@ public class Main {
         // Ajouteur les bonnes questions dans la liste peu importe le type
         for (int i = 0; i < selected.size(); i++) {
             TypeQuestion t = selected.get(i);
+
             // Le thème de la question doit correspondre au thème sélectionné et le niveau doit correspondre à la phase
             if (t.getTheme().toUpperCase().equals(themes.getThemeCourant().toUpperCase()) && t.getNiveau() == e.phaseDeJeu()) {
                 questions.ajouter(new Question(i, t));
@@ -228,13 +277,13 @@ public class Main {
 
         q.afficher();
 
-        System.out.print("Réponse: ");
+        System.out.print("Réponse : ");
 
         String reponse = sc.nextLine();
 
         if (q.saisir(reponse)) {
             System.out.println("Bonne réponse");
-            j.mAJScore(phase);
+            j.mAJScore(phase); // La méthode mAJScore récpurère le bon nombre de points grâce au numéro de la phase
         }else {
             System.out.println("Mauvaise réponse");
         }
