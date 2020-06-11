@@ -1,6 +1,6 @@
 package players;
 
-public class Joueur {
+public class Joueur implements Comparable<Joueur> {
     private static int NUMERO = 100;
     private int numero;
     private String nom;
@@ -46,5 +46,14 @@ public class Joueur {
 
     public String getNom() {
         return nom;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    @Override
+    public int compareTo(Joueur joueur) {
+        return Integer.toString(joueur.getScore()).compareTo(Integer.toString(score));
     }
 }

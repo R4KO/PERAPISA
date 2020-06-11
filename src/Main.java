@@ -4,6 +4,7 @@ import question.*;
 import java.io.*;
 import java.lang.reflect.ParameterizedType;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -129,8 +130,15 @@ public class Main {
                 for (Joueur joueur : j) {
                     poserQuestion(e.phaseDeJeu(), questions.selectionnerQuestion(), joueur);
                 }
+
+                // Trier le tableau de joueur
+                Arrays.sort(j);
+                for (Joueur joueur : j) {
+                    joueur.afficher();
+                }
                 break;
         }
+
     }
 
     public static void poserQuestion(int phase, Question q, Joueur j) {
