@@ -2,14 +2,12 @@ import players.*;
 import question.*;
 
 import java.io.*;
-import java.lang.reflect.ParameterizedType;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
-    /// TODO: LinkedLists
     static ArrayList<TypeQCM> a = new ArrayList<>(); // QCM
     static ArrayList<TypeVF> b = new ArrayList<>(); // Vrai/Faux
     static ArrayList<TypeRC> c = new ArrayList<>(); // Répnses courtes
