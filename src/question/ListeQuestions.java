@@ -33,4 +33,8 @@ public class ListeQuestions {
     public int nombreDeQuestions() {
         return list.size();
     }
+
+    public void viderQuestions() {
+        list.clear();
+    }
 }

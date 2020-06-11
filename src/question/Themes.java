@@ -33,7 +33,7 @@ public class Themes {
             nouveauTheme = themes[indice];
         }
         else {
-            nouveauTheme = themes[Arrays.asList(themes).indexOf(themeCourant) + 1];
+            nouveauTheme = themes[(Arrays.asList(themes).indexOf(themeCourant) + 1) % themes.length];
             if (themesPasses.contains(nouveauTheme)) {
                 modifierTheme(nouveauTheme);
                 selectionnerTheme();

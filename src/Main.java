@@ -114,21 +114,18 @@ public class Main {
         System.out.println("Type sélectionné : " + typeSelected);
         System.out.println("Thème courant : " + themes.getThemeCourant());
 
-        // Ajouteur les bonnes questions dans la liste peu importe le type
-        for (int i = 0; i < selected.size(); i++) {
-            TypeQuestion t = selected.get(i);
-            // Le thème de la question doit correspondre au thème sélectionné et le niveau doit correspondre à la phase
-            if (t.getTheme().toUpperCase().equals(themes.getThemeCourant().toUpperCase()) && t.getNiveau() == e.phaseDeJeu()) {
-                questions.ajouter(new Question(i, t));
-            }
-        }
+        //ajouterQuestions(selected, themes, e, questions);
 
-        System.out.println("Nombre de questions: " + questions.nombreDeQuestions());
+        //System.out.println("Nombre de questions: " + questions.nombreDeQuestions());
         //questions.afficher();
         switch (e.phaseDeJeu()) {
             case 1:
                 for (Joueur joueur : j) {
+                    ajouterQuestions(selected, themes, e, questions);
+                    System.out.println("Nombre de questions: " + questions.nombreDeQuestions());
                     poserQuestion(e.phaseDeJeu(), questions.selectionnerQuestion(), joueur);
+                    // changer de thème
+                    themes.selectionnerTheme();
                 }
 
                 // Trier le tableau de joueur
@@ -139,6 +136,21 @@ public class Main {
                 break;
         }
 
+    }
+
+    //fonction pour ajouter les fonctions dans la liste de questions par rapport au thème et à la phase
+    public static void ajouterQuestions(ArrayList<TypeQuestion> selected, Themes themes, EnsJoueurs e, ListeQuestions questions) {
+        // Vider la liste de questions
+        questions.viderQuestions();
+
+        // Ajouteur les bonnes questions dans la liste peu importe le type
+        for (int i = 0; i < selected.size(); i++) {
+            TypeQuestion t = selected.get(i);
+            // Le thème de la question doit correspondre au thème sélectionné et le niveau doit correspondre à la phase
+            if (t.getTheme().toUpperCase().equals(themes.getThemeCourant().toUpperCase()) && t.getNiveau() == e.phaseDeJeu()) {
+                questions.ajouter(new Question(i, t));
+            }
+        }
     }
 
     public static void poserQuestion(int phase, Question q, Joueur j) {
